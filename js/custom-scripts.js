@@ -1,8 +1,57 @@
 $(document).ready(function () {
 
     /*** initial **/
+
     $('.product-counter .current-value').html($('.product-counter input').val());
-    /**en of initial block **/
+
+    var searchObj = $('#form-search');
+    var topMenuObj = $('.header-top .top-menu');
+    var mainMenuObj = $('nav ul');
+    var basketObj = $('.basket-block');
+
+    /**end of initial block **/
+
+    /** scripts for adaptive **/
+
+    if ($(window).width() < '981'){
+        searchObj.prependTo('.header .mobile-menu');
+        topMenuObj.insertAfter('.top-menu-title');
+        mainMenuObj.insertAfter('.main-menu-title');
+        topMenuObj.css('display', 'none');
+        mainMenuObj.css('display', 'none');
+        $('.mobile-menu-title').removeClass('active');
+        basketObj.insertAfter('.sign-mobile');
+    } else {
+        searchObj.insertBefore('#form-locals');
+        topMenuObj.prependTo('.header-top');
+        mainMenuObj.prependTo('.header-nav .block-content');
+        topMenuObj.css('display', 'block');
+        mainMenuObj.css('display', 'block');
+        basketObj.insertAfter('.sign-block');
+    }
+
+    $(window).resize(function(){
+        if ($(window).width() < '981'){
+            searchObj.prependTo('.header .mobile-menu');
+            topMenuObj.insertAfter('.top-menu-title');
+            mainMenuObj.insertAfter('.main-menu-title');
+            topMenuObj.css('display', 'none');
+            mainMenuObj.css('display', 'none');
+            $('.mobile-menu-title').removeClass('active');
+            basketObj.insertAfter('.sign-mobile');
+        } else {
+            searchObj.insertBefore('#form-locals');
+            topMenuObj.prependTo('.header-top');
+            mainMenuObj.prependTo('.header-nav .block-content');
+            topMenuObj.css('display', 'block');
+            mainMenuObj.css('display', 'block');
+            basketObj.insertAfter('.sign-block');
+            $('.basket-visible').removeClass('form-basket-order');
+        }
+    });
+
+    /** end of scripts for adaptive **/
+
 
     $('.show-search').click(function() {
 
@@ -59,6 +108,29 @@ $(document).ready(function () {
 
     });
 
+    $('.mobile-menu-title').click(function() {
+
+        if ($(window).width() < '981'){
+            $(this).toggleClass('active');
+            $(this).next('ul').slideToggle();
+        }
+
+    });
+
+    $('.mobile-menu .burger').click(function() {
+
+        $(this).toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
+
+    });
+
+    $('.basket-visible').click(function() {
+        if ($(window).width() < '981'){
+            $('.form-basket-order').slideToggle();
+            $(this).toggleClass('active');
+        }
+    });
+
     $(function($) {
         $('#form-mailing').validatr({
             showall: true
@@ -71,7 +143,15 @@ $(document).ready(function () {
 
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    dots: true
+                }
+            }
+        ]
 
     });
 
