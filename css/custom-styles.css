@@ -161,8 +161,13 @@ img {
     color: #ffffff;
 }
 
-input.verifiable:valid {
-    border: 1px solid #1bb551;
+.invalid-field {
+    border: 1px solid #ff0000!important;
+    background: transparent url('../images/icon-invalid.png') no-repeat 95% center;
+}
+input:valid {
+    border: 1px solid #1bb551!important;
+    background: transparent url('../images/icon-valid.png') no-repeat 95% center;
 }
 
 
@@ -203,6 +208,11 @@ input.verifiable:valid {
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+.form-search input[type="text"]:valid {
+    border: none!important;
+    border-bottom: 1px solid #cdcdcd!important;
+    background: none!important;
 }
 .form-search input[type="text"].active {
     width: 300px;
@@ -873,7 +883,7 @@ nav ul li a:hover, nav ul li a.active {
     width: 255px;
     height: 30px;
     color: #000000;
-    padding: 0 20px;
+    padding: 0 30px 0 20px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;

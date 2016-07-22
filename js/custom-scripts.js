@@ -137,6 +137,11 @@ $(document).ready(function () {
         });
     });
 
+    $('input[type="submit"]').click(function() {
+        $(this).parent().find('.form-field:invalid').addClass('invalid-field');
+        $(this).parent().find('.form-field:valid').addClass('valid-field');
+    });
+
     /** scripts for slider **/
 
     $('.slider').slick({
