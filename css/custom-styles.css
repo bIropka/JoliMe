@@ -167,6 +167,9 @@ input.verifiable:valid {
 
 
 /* header */
+.mobile-menu {
+    display: none;
+}
 .header-top {
     padding: 12px 30px;
 }
@@ -346,7 +349,7 @@ nav ul li a:hover, nav ul li a.active {
 /* header-info */
 .header-info {
     position: relative;
-    padding: 105px 30px 100px;
+    padding: 85px 30px 90px;
 }
 .header-info .phone-number, .header-info .email {
     display: inline-block;
@@ -592,7 +595,7 @@ nav ul li a:hover, nav ul li a.active {
 /* header-bottom */
 .header-bottom {
     border-top: 1px solid #e7e7e7;
-    padding: 14px 0;
+    padding: 10px 0;
 }
 .header-bottom ul li {
     font-family: 'Open Sans Semibold', sans-serif;
@@ -670,6 +673,10 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Helvetica Neuecyr Light', sans-serif;
     font-size: 15px;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .slider-dots li.active {
     color: #a875ad;
@@ -678,7 +685,7 @@ nav ul li a:hover, nav ul li a.active {
 /* products tab */
 .products-tab {
     position: relative;
-    margin: 35px auto;
+    margin: 40px auto 15px;
 }
 .tab-controls li {
     font-family: 'Helvetica Neuecyr Thin', sans-serif;
@@ -714,7 +721,7 @@ nav ul li a:hover, nav ul li a.active {
     display: inline-block;
 }
 .products-tab .tab {
-    margin-top: 25px;
+    margin-top: 16px;
 }
 .products-tab .tab li {
     display: none;
@@ -775,13 +782,14 @@ nav ul li a:hover, nav ul li a.active {
 .product-card .product-description {
     display: inline-block;
     width: 65%;
-    height: 40px;
+    height: 35px;
     font-family: 'Open Sans Light', sans-serif;
     font-size: 14px;
     color: #616161;
     margin-left: 15px;
     float: left;
     margin-bottom: 15px;
+    line-height: 1.2;
 }
 .product-card .product-counter {
     width: 20%;
@@ -795,6 +803,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Open Sans Semibold', sans-serif;
     font-size: 16px;
     text-align: center;
+    -moz-text-align-last: center;
     -ms-text-align-last: center;
     text-align-last: center;
     position: relative;
@@ -821,6 +830,7 @@ nav ul li a:hover, nav ul li a.active {
 .product-card .product-cost {
     width: 35%;
     text-align: center;
+    -moz-text-align-last: center;
     -ms-text-align-last: center;
     text-align-last: center;
 }
@@ -889,10 +899,17 @@ nav ul li a:hover, nav ul li a.active {
 
 /* ads */
 .ads {
-    margin: 30px 0 55px;
+    margin: 30px 0 25px;
+}
+.ads .small-ad {
+    width: 32%;
+}
+.ads .large-ad {
+    width: 66%;
 }
 .ads li a {
     display: block;
+    width: 100%;
     border: 1px solid #e7e7e7;
     margin-bottom: 30px;
     position: relative;
@@ -931,7 +948,8 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 15px;
     color: #000000;
-    margin-top: 20px;
+    margin-top: 15px;
+    line-height: 1.2;
 }
 .articles-short ul {
     margin-top: 25px;
@@ -981,7 +999,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 /* footer */
 .footer {
-    margin-top: 5%;
+    margin-top: 3.5%;
 }
 .footer-top {
     background: #f8f8f8;
@@ -1126,4 +1144,154 @@ nav ul li a:hover, nav ul li a.active {
     height: 9px;
     background: transparent url('../images/icon-markello-logo.png') no-repeat center;
     margin-left: 5px;
+}
+
+@media (max-width: 1170px) {
+    .articles-short>.left-column {
+        width: 45%;
+    }
+    .articles-short>.right-column {
+        width: 55%;
+    }
+    .footer-top ul li {
+        font-size: 17px;
+    }
+    .form-mailing {
+        height: auto;
+        padding: 15px 4%;
+        text-align: center;
+    }
+    .form-search input[type="text"].active {
+        width: 250px;
+    }
+    .product-card .add-to-cart:after {
+        right: 10px;
+    }
+}
+
+@media (max-width: 980px) {
+    .block-content {
+        padding-left: 20px !important;
+        padding-right: 20px!important;
+    }
+    .footer-middle .block-content, .footer-top .block-content, .products-tab .tab {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    .footer-middle .footer-links {
+        margin: 20px;
+        width: 250px;
+    }
+    .footer-top {
+        padding: 25px 0;
+    }
+    .footer-top ul li {
+        width: 285px;
+        -moz-text-align-last: left;
+        -ms-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+    }
+    .articles-short>.left-column, .articles-short>.right-column {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .articles-short>.left-column {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+    .product-card {
+        width: 295px;
+        margin: 20px;
+    }
+    .slide-1 h2 {
+        font-size: 36px;
+    }
+    .slide-1 p, .slide-1 p span {
+        font-size: 20px;
+    }
+    .slide {
+        min-height: 400px;
+        padding: 80px 0;
+    }
+
+    /* top blocks */
+    .header-nav {
+        display: none;
+    }
+    .top-menu {
+        display: none;
+    }
+
+    .header-top {
+        height: 47px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .mobile-menu {
+        display: block;
+        width: 269px;
+        background: #323232;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 11;
+        padding-bottom: 50px;
+    }
+    .mobile-menu .burger {
+        display: block;
+        width: 51px;
+        height: 47px;
+        background: #323232 url('../images/sprite-icon-burger.png') no-repeat right center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: -51px;
+    }
+    .mobile-menu .logo {
+        display: block;
+        width: 120px;
+        height: 91px;
+        margin: 50px auto;
+        background: transparent url('../images/image-logo-mobile.png') no-repeat center;
+        background-size: cover;
+    }
+    .top-menu-title, .main-menu-title {
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        font-family: 'Open Sans Bold', sans-serif;
+        font-size: 18px;
+        color: #b5b5b5;
+        padding-left: 15px;
+        position: relative;
+    }
+    .top-menu-title:after, .main-menu-title:after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 8px;
+        background: transparent url('../images/sprite-arrow-mobile.png') no-repeat left center;
+        background-size: cover;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+    }
+    .top-menu-title, .main-menu-title {
+
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
 }
