@@ -18,7 +18,7 @@ $(document).ready(function () {
         topMenuObj.insertAfter('.top-menu-title');
         mainMenuObj.insertAfter('.main-menu-title');
         topMenuObj.css('display', 'none');
-        $('.mobile-menu-title').removeClass('active');
+        $('.top-menu-title').removeClass('active');
         basketObj.insertAfter('.sign-mobile');
     } else {
         searchObj.insertBefore('#form-locals');
@@ -35,7 +35,7 @@ $(document).ready(function () {
             topMenuObj.insertAfter('.top-menu-title');
             mainMenuObj.insertAfter('.main-menu-title');
             topMenuObj.css('display', 'none');
-            $('.mobile-menu-title').removeClass('active');
+            $('.top-menu-title').removeClass('active');
             basketObj.insertAfter('.sign-mobile');
             $('.form-basket-order').slideUp();
             $('.basket-visible').removeClass('mobile-hover');
