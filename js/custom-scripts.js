@@ -157,18 +157,6 @@ $(document).ready(function () {
         $(this).parent().find('.form-field:valid').addClass('valid-field');
     });
 
-    /** scripts for scroll **/
-
-    $('.form-basket-order ul').niceScroll({
-        autohidemode: false,
-        background: "#f2f2f2",
-        cursorcolor: "#cccccc",
-        cursorwidth: "7px",
-        cursorborder: "none"
-    });
-
-    /** end of scripts for scroll **/
-
     /** scripts for slider **/
 
     $('.slider').slick({
