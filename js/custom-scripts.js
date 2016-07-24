@@ -128,7 +128,7 @@ $(document).ready(function () {
 
     });
 
-    $('.mobile-menu .burger').click(function() {
+    $('.burger').click(function() {
 
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('active');
