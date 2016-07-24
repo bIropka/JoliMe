@@ -2,6 +2,17 @@ $(document).ready(function () {
 
     /*** initial **/
 
+        /* pre-load backgrounds for slider */
+    var slide = $('.slider .slide');
+    var image = $('.slider .slide').find('img');
+
+    for (var i = 0; i < slide.length; i++) {
+        var imagePath = image[i].getAttribute('src');
+        console.log('url("' + imagePath + '")');
+        $(slide[i]).css('background-image', 'url("' + imagePath + '")');
+    }
+    /* end of pre-load backgrounds for slider */
+
     $('.product-counter .current-value').html($('.product-counter input').val());
 
     var searchObj = $('#form-search');

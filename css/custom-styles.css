@@ -645,9 +645,12 @@ nav ul li a:hover, nav ul li a.active {
     border: none;
     outline: none;
 }
-.slide-1 {
-    background: transparent url('../images/image-slide-1.jpg') no-repeat center;
+.slide {
+    background: transparent no-repeat center;
     background-size: cover;
+}
+.slide img {
+    display: none;
 }
 .slide-1 h2 {
     display: block;
