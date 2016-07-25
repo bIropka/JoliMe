@@ -73,18 +73,20 @@ $(document).ready(function () {
 
     $('.current-local').click(function() {
 
-        $(this).siblings('ul').slideToggle();
+        $(this).siblings('ul').stop().slideToggle();
         $(this).toggleClass('active');
 
     });
 
-    $('#form-locals .radio-locals').on('change', function() {
+    $('#form-locals .radio-violet').on('change', function() {
 
         var newText = $(this).siblings('label').find('.text').html();
         var newClass = $(this).siblings('label').find('.flag').attr("class");
 
         $('.current-local .text').html(newText);
         $('.current-local .flag').removeClass().addClass(newClass);
+
+        $('#form-locals ul').stop().slideToggle();
 
     });
 
@@ -210,5 +212,63 @@ $(document).ready(function () {
     );
 
     /** end of scripts for slider **/
+
+    /*************************
+     Category page scripts
+     ************************/
+
+    $('.main-panel-control .current-choice').click(function() {
+        $(this).toggleClass('active');
+        $(this).next().stop().slideToggle();
+    });
+
+    $('.main-panel-control .radio-violet').on('change', function() {
+
+        var newText = $(this).siblings('label').html();
+
+        $(this).parents('.form-pop-up').siblings('.current-choice').html(newText);
+
+        $(this).parents('.form-pop-up').stop().slideToggle();
+
+    });
+
+    $('.sidebar-control').click(function() {
+
+        $('.products').find('.only-full').toggleClass('hidden');
+        $('.sidebar').toggleClass('slide-left');
+        $('.main-panel').toggleClass('full-width');
+        $('.main-panel .sidebar-control').toggleClass('hidden');
+
+    });
+
+    /** script for filter-slider **/
+
+    var minPrice = 1000, maxPrice = 30000;
+    $("#filter-slider-range").slider({
+        range: true,
+        min: minPrice,
+        max: maxPrice,
+        step: 1000,
+        values: [ 5000, 15000 ],
+        create: function( event, ui ) {
+            $(".filter-slider-min").html(minPrice);
+            $(".filter-slider-max").html(maxPrice);
+            $(".filter-slider .ui-slider-handle:first").html(5000);
+            $(".filter-slider .ui-slider-handle:last").html(15000);
+        },
+        slide: function( event, ui ) {
+            $( "#filter-slider-amount" ).val( ui.values[ 0 ] + " " + ui.values[ 1 ] );
+            $(".filter-slider .ui-slider-handle:first").html(ui.values[ 0 ]);
+            $(".filter-slider .ui-slider-handle:last").html(ui.values[ 1 ]);
+        }
+    });
+
+    /** end of script for filter-slider **/
+
+
+
+    /*************************
+     End of category page scripts
+     ************************/
 
 });
