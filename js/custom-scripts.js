@@ -267,6 +267,18 @@ $(document).ready(function () {
 
     });
 
+    $('.product-more-info .control-panel li').click(function() {
+
+        if(!$(this).hasClass('active')) {
+            var currentIndex = $(this).index();
+            $('.product-more-info .control-panel .active').removeClass('active');
+            $(this).addClass('active');
+            $('.product-more-info .more-content .active').removeClass('active');
+            $('.product-more-info .more-content li').eq(currentIndex).addClass('active');
+        }
+
+    });
+
     /** script for filter-slider **/
 
     var minPrice = parseInt($('.filter-slider-min').html()), maxPrice = parseInt($('.filter-slider-max').html());
@@ -276,25 +288,6 @@ $(document).ready(function () {
         step: 1000
 
     });
-    /*var minPrice = 1000, maxPrice = 30000;
-    $("#filter-slider-range").slider({
-        range: true,
-        min: minPrice,
-        max: maxPrice,
-        step: 1000,
-        values: [ 5000, 15000 ],
-        create: function( event, ui ) {
-            $(".filter-slider-min").html(minPrice);
-            $(".filter-slider-max").html(maxPrice);
-            $(".filter-slider .ui-slider-handle:first").html(5000);
-            $(".filter-slider .ui-slider-handle:last").html(15000);
-        },
-        slide: function( event, ui ) {
-            $( "#filter-slider-amount" ).val( ui.values[ 0 ] + " " + ui.values[ 1 ] );
-            $(".filter-slider .ui-slider-handle:first").html(ui.values[ 0 ]);
-            $(".filter-slider .ui-slider-handle:last").html(ui.values[ 1 ]);
-        }
-    });*/
 
     /** end of script for filter-slider **/
 

@@ -7,6 +7,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Helvetica Neuecyr Bold';
+    src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+    src: url("../fonts/HelveticaNeueCyr-Bold.eot") format("embedded-opentype"), url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Helvetica Neuecyr Medium';
     src: url('../fonts/helveticaneuecyr-medium.eot');
     src: url('../fonts/helveticaneuecyr-medium.eot') format("embedded-opentype"), url('../fonts/helveticaneuecyr-medium.woff') format('woff'), url('../fonts/helveticaneuecyr-medium.ttf') format('truetype'), url('../fonts/helveticaneuecyr-medium.svg') format('svg');
@@ -1698,6 +1705,10 @@ nav ul li a:hover, nav ul li a.active {
 .main-panel .show-more:hover {
     background: #ffffff;
 }
+.main-panel .show-more:active, .main-panel .show-more:focus {
+    color: transparent;
+    background: #ffffff url('../images/more_preloader.gif') no-repeat center;
+}
 
 .products-bottom {
     display: block;
@@ -1721,6 +1732,198 @@ nav ul li a:hover, nav ul li a.active {
 }
 .products-bottom .pages-control .active a {
     font-family: 'Open Sans Bold', sans-serif;
+}
+
+
+/**********************
+**** CATEGORY PAGE ****
+**********************/
+
+.product-item .product-image {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    height: 275px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+}
+.product-item .product-image img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.product-item .product-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4.5%;
+    padding: 10px 0;
+}
+.product-item .product-category {
+    display: inline-block;
+    vertical-align: bottom;
+    font-family: 'Helvetica Neuecyr Medium', sans-serif;
+    font-size: 14px;
+    color: #a875ad;
+}
+.product-item .product-measure {
+    display: inline-block;
+    vertical-align: bottom;
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 12px;
+    color: #5d5d5d;
+}
+.product-item .product-name {
+    font-family: 'Helvetica Neuecyr Medium', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #282828;
+}
+.product-item .product-description {
+    width: 350px;
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #5d5d5d;
+    height: 53px;
+    overflow-y: hidden;
+}
+.product-item .title {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 12px;
+    color: #a875ad;
+    margin-bottom: 5px;
+}
+.product-item .product-cost {
+    display: inline-block;
+    vertical-align: top;
+}
+.product-item .product-cost span {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 16px;
+    color: #242424;
+}
+.product-item .product-counter {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+}
+.product-item .product-counter .current-value {
+    margin: 0 4px;
+}
+.form-add-to-cart .form-submit {
+    display: block;
+    width: 215px;
+    height: 32px;
+    background: #a875ad;
+    border: 1px solid #a875ad;
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    margin: 20px 0 10px;
+}
+.form-add-to-cart .form-submit:hover {
+    color: #a875ad;
+    background: transparent;
+}
+.product-item .discounts .title {
+    margin-bottom: 0;
+}
+.product-item .discounts ul li {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 12px;
+    color: #000000;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.product-item .discounts ul li:before {
+    content: '\2022';
+    display: inline-block;
+    font-size: 18px;
+    line-height: 3px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.product-advantages {
+    margin: 20px 0 30px;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    padding: 12px 15px;
+}
+.product-advantages li {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 15px;
+    color: #2e2e2e;
+}
+.product-advantages li:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    background: transparent url('../images/violet-ok-nice.png') no-repeat center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.product-more-info .control-panel li {
+    padding: 15px;
+    cursor: pointer;
+}
+.product-more-info .control-panel .active {
+    border: 1px solid #e7e7e7;
+    border-bottom: none;
+    background: #f8f8f8;
+}
+.product-more-info .control-panel li:hover p {
+    border-bottom: 1px dashed transparent;
+}
+.product-more-info .control-panel .active:hover p {
+    border-bottom: 2px solid #a875ad;
+}
+.product-more-info .control-panel li p {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #272727;
+    border-bottom: 1px dashed #272727;
+}
+.product-more-info .control-panel .active p {
+    font-family: 'Helvetica Neuecyr Bold', sans-serif;
+    font-size: 18px;
+    color: #242424;
+    border-bottom: 2px solid #a875ad;
+}
+.product-more-info .more-content li {
+    display: none;
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #525252;
+    border: 1px solid #e7e7e7;
+    background: #f8f8f8;
+    padding: 20px 15px;
+    margin-top: -1px;
+    margin-bottom: 40px;
+}
+.product-more-info .more-content .active {
+    display: block;
+}
+
+.analogs .title, .you-should-like .title {
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 20px;
+    color: #242424;
+    margin-bottom: 25px;
+}
+.item-content .product-card {
+    width: 32%;
+    min-width: 290px;
 }
 
 
@@ -2239,6 +2442,21 @@ nav ul li a:hover, nav ul li a.active {
     .products-bottom {
         width: 100%;
     }
+    .product-advantages {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    .product-advantages li {
+        margin: 8px 20px 8px 0;
+    }
+    .product-advantages li:before {
+        margin-left: 20px;
+    }
+    .product-item .product-image {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2380,6 +2598,25 @@ nav ul li a:hover, nav ul li a.active {
         top: 1px;
         left: 0;
     }
+    .product-more-info .more-content li {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 14px;
+    }
+    .product-more-info .control-panel li {
+        padding: 10px 5px;
+        cursor: pointer;
+    }
+    .product-more-info .control-panel .active {
+        border: 1px solid #e7e7e7;
+    }
+    .product-more-info .control-panel li:hover p {
+        border-bottom: 1px dashed #272727;
+        font-size: 15px;
+    }
+    .product-more-info .control-panel .active:hover p, .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
+        font-size: 15px;
+    }
 }
 @media (max-width: 480px) {
     .block-content {
@@ -2415,5 +2652,19 @@ nav ul li a:hover, nav ul li a.active {
     .main-panel-control .sort-by {
         display: block;
         margin-right: 0;
+    }
+    .product-item .product-image, .product-item .product-description {
+        width: 100%;
+    }
+    .product-more-info .control-panel li:hover p, .product-more-info .control-panel .active:hover p,
+    .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .product-more-info .control-panel li:hover p, .product-more-info .control-panel .active:hover p,
+    .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
+        font-size: 11px;
     }
 }
