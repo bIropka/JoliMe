@@ -241,6 +241,26 @@ $(document).ready(function () {
 
     });
 
+    $('.products-layout').click(function() {
+
+        if (!$(this).hasClass('active')) {
+
+            var products = $('.products');
+
+            $('.products-layout').toggleClass('active');
+            if ($(this).hasClass('grid-layout')) {
+                $('.products').fadeOut(0);
+                $('.products').removeClass('in-line');
+                $('.products').fadeIn(600);
+            } else if ($(this).hasClass('line-layout')) {
+                $('.products').fadeOut(0);
+                $('.products').addClass('in-line');
+                $('.products').fadeIn(600);
+            }
+        }
+
+    });
+
     /** script for filter-slider **/
 
     var minPrice = 1000, maxPrice = 30000;

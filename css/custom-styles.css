@@ -805,6 +805,7 @@ nav ul li a:hover, nav ul li a.active {
     position: absolute;
     width: 30%;
     height: auto;
+    z-index: 1;
 }
 .top-border-image {
     top: 0;
@@ -1126,7 +1127,7 @@ nav ul li a:hover, nav ul li a.active {
 .category-content {
     border: 1px solid #e7e7e7;
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /* sidebar */
@@ -1571,12 +1572,96 @@ nav ul li a:hover, nav ul li a.active {
 .products .product-card {
     width: 48.5%;
     margin-top: 0;
+    background: #ffffff;
 }
 .product-card.hidden {
     display: none;
 }
 .full-width .product-card {
-    max-width: 350px;
+    max-width: 345px;
+}
+.in-line .product-card {
+    width: 100%;
+    max-width: 100%;
+}
+.in-line .product-card-image-block {
+    width: 44%;
+    padding-top: 28%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.in-line .product-card-image-block .product-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: -11%;
+}
+.in-line h4 {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    float: none;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 4.5%;
+}
+.in-line .product-counter {
+    width: 8%;
+    float: none;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+.in-line .product-counter .current-value {
+    font-size: 14px;
+}
+.in-line .product-description {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    float: none;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 4.5%;
+}
+.in-line .add-to-cart {
+    width: 30%;
+    left: auto;
+    right: -1px;
+}
+.in-line .product-cost {
+    width: 25%;
+    position: absolute;
+    right: 26.5%;
+    bottom: 0;
+    -moz-text-align-last: left;
+    -ms-text-align-last: left;
+    text-align-last: left;
+    text-align: left;
+}
+
+.full-width .in-line .product-card-image-block {
+    width: 44%;
+    height: 22%;
+}
+.full-width .in-line .product-card-image-block .product-card-image {
+    top: -16%;
+}
+.full-width .in-line .product-cost {
+    width: 15%;
+    right: 36%;
+    bottom: 20px;
+}
+.full-width .in-line .product-counter {
+    top: auto;
+    right: 30%;
+    bottom: 30px;
+}
+.full-width .in-line .add-to-cart {
+    width: 20%;
 }
 
 .main-panel .show-more {
@@ -1599,10 +1684,8 @@ nav ul li a:hover, nav ul li a.active {
 
 .products-bottom {
     display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -40px;
+    width: 75.64102564102564%;
+    margin-top: 20px;
     padding: 0 20px;
 }
 .products-statistic, .products-statistic span {
@@ -1615,7 +1698,12 @@ nav ul li a:hover, nav ul li a.active {
     border-right: 1px solid #e7e7e7;
 }
 .products-bottom .pages-control li a {
-
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 12px;
+    color: #000000;
+}
+.products-bottom .pages-control .active a {
+    font-family: 'Open Sans Bold', sans-serif;
 }
 
 
