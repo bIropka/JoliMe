@@ -31,6 +31,7 @@ $(document).ready(function () {
         topMenuObj.css('display', 'none');
         $('.top-menu-title').removeClass('active');
         basketObj.insertAfter('.sign-mobile');
+        $('.main-panel').addClass('full-width');
     } else {
         searchObj.insertBefore('#form-locals');
         topMenuObj.prependTo('.header-top');
@@ -38,6 +39,8 @@ $(document).ready(function () {
         topMenuObj.css('display', 'block');
         mainMenuObj.css('display', 'block');
         basketObj.insertAfter('.sign-block');
+        $('.products').removeClass('in-line');
+        $('.main-panel').removeClass('full-width');
     }
 
     $(window).resize(function(){
@@ -50,6 +53,7 @@ $(document).ready(function () {
             basketObj.insertAfter('.sign-mobile');
             $('.form-basket-order').slideUp();
             $('.basket-visible').removeClass('mobile-hover');
+            $('.main-panel').addClass('full-width');
         } else {
             searchObj.insertBefore('#form-locals');
             topMenuObj.prependTo('.header-top');
@@ -58,6 +62,8 @@ $(document).ready(function () {
             mainMenuObj.css('display', 'block');
             basketObj.insertAfter('.sign-block');
             $('.form-basket-order').slideUp();
+            $('.products').removeClass('in-line');
+            $('.main-panel').removeClass('full-width');
         }
     });
 
