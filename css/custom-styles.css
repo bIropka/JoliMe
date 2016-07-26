@@ -1440,7 +1440,7 @@ nav ul li a:hover, nav ul li a.active {
     bottom: 3px;
 }
 .main-panel-control .sidebar-control:hover {
-    border-bottom: none;
+    border-bottom: 1px dashed transparent;
 }
 .main-panel-control .sort-by, .main-panel-control .show-amount, .main-panel-control .view-control, .main-panel-control form {
     display: inline-block;
@@ -1675,6 +1675,7 @@ nav ul li a:hover, nav ul li a.active {
     top: auto;
     right: 30%;
     bottom: 30px;
+    z-index: 1;
 }
 .full-width .in-line .add-to-cart {
     width: 25%;
