@@ -1926,7 +1926,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #242424;
     margin-bottom: 25px;
 }
-.item-content .product-card {
+.item-content .product-card, .form-cart .product-card {
     width: 32%;
     min-width: 290px;
 }
