@@ -178,6 +178,9 @@ input[type="text"]:valid, input[type="email"]:valid, input[type="tel"]:valid  {
     border: 1px solid #1bb551!important;
     background: transparent url('../images/icon-valid.png') no-repeat 95% center;
 }
+h1 {
+    font-weight: 100;
+}
 
 
 /* header */
@@ -1342,6 +1345,7 @@ nav ul li a:hover, nav ul li a.active {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    cursor: pointer;
 
 }
 .filter-slider .ui-rangeSlider-label-value {
@@ -1791,6 +1795,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #5d5d5d;
     height: 53px;
     overflow-y: hidden;
+    padding: 3px 0;
 }
 .product-item .title {
     font-family: 'Open Sans Semibold', sans-serif;
@@ -2555,6 +2560,9 @@ nav ul li a:hover, nav ul li a.active {
         float: none;
         text-align: center;
         margin-top: 15px;
+    }
+    .breadcrumbs {
+        margin: 20px 0;
     }
 
 }
