@@ -284,9 +284,9 @@
 
         <h2>Оформление заказа</h2>
 
-        <ul class="cart-item">
+        <ul class="cart-item clearfix">
 
-            <li class="cart-row cart-caption">
+            <li class="clearfix">
                 <div class="cart-product">Продукт</div>
                 <div class="cart-cost">Цена</div>
                 <div class="cart-discount">Скидка</div>
@@ -294,10 +294,10 @@
                 <div class="cart-summa">Сумма</div>
             </li>
 
-            <li class="cart-row cart-caption">
+            <li class="clearfix">
                 <div class="cart-product">
                     <div class="cart-product-image">
-                        <img src="images/image-product-soap-1.jpg" alt="img"/>
+                        <img src="images/image-product-cart-1.png" alt="img"/>
                     </div>
                     <div class="cart-product-info">
                         <div class="cart-product-name">Stenders</div>
@@ -309,7 +309,7 @@
                 </div>
                 <div class="cart-discount">-</div>
                 <div class="cart-amount">
-                    <div class="product-counter in-wide">
+                    <div class="product-counter">
                         <div class="decrement control">-</div>
                         <div class="current-value"></div>
                         <div class="increment control">+</div>
@@ -320,14 +320,14 @@
                 <div class="close-marker">x</div>
             </li>
 
-            <li class="cart-row cart-caption">
+            <li class="clearfix">
                 <div class="cart-product">
                     <div class="cart-product-image">
-                        <img src="images/image-product-soap-2.jpg" alt="img"/>
+                        <img src="images/image-product-cart-2.png" alt="img"/>
                     </div>
                     <div class="cart-product-info">
-                        <div class="cart-product-name"></div>
-                        <div class="cart-product-description"></div>
+                        <div class="cart-product-name">Stenders</div>
+                        <div class="cart-product-description">C нежным ароматом и цветками календулы</div>
                     </div>
                 </div>
                 <div class="cart-cost">
@@ -337,24 +337,31 @@
                 <div class="cart-discount">
                     <div class="discount-value">30%</div>
                 </div>
-                <div class="cart-amount"></div>
+                <div class="cart-amount">
+                    <div class="product-counter">
+                        <div class="decrement control">-</div>
+                        <div class="current-value"></div>
+                        <div class="increment control">+</div>
+                        <label><input type="number" class="hidden" value="1"/></label>
+                    </div>
+                </div>
                 <div class="cart-summa"><span class="summa-value">6000</span> руб</div>
                 <div class="close-marker">x</div>
             </li>
 
         </ul>
 
-        <div class="result-cost"><span class="text">>Итого:</span><span class="result-value">16 000</span>руб</div>
+        <div class="result-cost"><span class="text">Итого:</span><span class="result-value">16 000</span>руб</div>
 
         <div class="gifts">
 
-            <p class="title"></p>
+            <p class="title">Ваши подарки и специальные предложения</p>
 
             <ul>
 
-                <li>
+                <li class="clearfix">
                     <div class="gift-image">
-                        <img src="images/image-product-soap-3.jpg" alt="img"/>
+                        <img src="images/image-product-cart-3.png" alt="img"/>
                     </div>
                     <div class="gift-description">Удивите своих близких, отправив им подарок в красивой оригинальной упаковке!</div>
                     <div class="product-cost"><span class="cost-value">100</span> руб</div>
@@ -362,9 +369,9 @@
                     <button class="add-to-cart button-violet">Добавить в корзину</button>
                 </li>
 
-                <li>
+                <li class="clearfix">
                     <div class="gift-image">
-                        <img src="images/image-product-soap-3.jpg" alt="img"/>
+                        <img src="images/image-product-cart-2.png" alt="img"/>
                     </div>
                     <div class="gift-description">Выгодное предложение - СКИДКА 39% увлажняющий гель для лица “Нежный персик”</div>
                     <div class="product-cost"><span class="cost-value">320</span> руб</div>
@@ -380,48 +387,48 @@
 
         <div class="special-gifts">
 
-            <p class="title"></p>
+            <p class="title">Ваши специальные подарки от 1000 руб</p>
 
             <ul>
 
                 <li>
                     <div class="special-gift-image">
-                        <img src="images/image-product-soap-1.jpg" alt="img"/>
+                        <img src="images/image-product-cart-1.png" alt="img"/>
                     </div>
                     <div class="special-gift-name">Calendula</div>
-                    <div class="special-gift-description">Удивите своих близких, отправив им подарок в красивой оригинальной упаковке!</div>
+                    <div class="special-gift-description">C нежным ароматом и цветками календулы</div>
                     <input class="radio-violet hidden" id="special-gift-1" name="special-gift" type="radio"/>
-                    <label for="special-gift-1"></label>
+                    <label class="radio-violet-label" for="special-gift-1"></label>
                 </li>
 
                 <li>
                     <div class="special-gift-image">
-                        <img src="images/image-product-soap-2.jpg" alt="img"/>
+                        <img src="images/image-product-cart-2.png" alt="img"/>
                     </div>
                     <div class="special-gift-name">Calendula</div>
-                    <div class="special-gift-description">Удивите своих близких, отправив им подарок в красивой оригинальной упаковке!</div>
+                    <div class="special-gift-description">C нежным ароматом и цветками календулы</div>
                     <input class="radio-violet hidden" id="special-gift-2" name="special-gift" type="radio"/>
-                    <label for="special-gift-2"></label>
+                    <label class="radio-violet-label" for="special-gift-2"></label>
                 </li>
 
                 <li>
                     <div class="special-gift-image">
-                        <img src="images/image-product-soap-3.jpg" alt="img"/>
+                        <img src="images/image-product-cart-3.png" alt="img"/>
                     </div>
                     <div class="special-gift-name">Calendula</div>
-                    <div class="special-gift-description">Удивите своих близких, отправив им подарок в красивой оригинальной упаковке!</div>
+                    <div class="special-gift-description">C нежным ароматом и цветками календулы</div>
                     <input class="radio-violet hidden" id="special-gift-3" name="special-gift" type="radio" checked/>
-                    <label for="special-gift-3"></label>
+                    <label class="radio-violet-label" for="special-gift-3"></label>
                 </li>
 
                 <li>
                     <div class="special-gift-image">
-                        <img src="images/image-product-soap-4.jpg" alt="img"/>
+                        <img src="images/image-product-cart-4.png" alt="img"/>
                     </div>
                     <div class="special-gift-name">Calendula</div>
-                    <div class="special-gift-description">Удивите своих близких, отправив им подарок в красивой оригинальной упаковке!</div>
+                    <div class="special-gift-description">C нежным ароматом и цветками календулы</div>
                     <input class="radio-violet hidden" id="special-gift-4" name="special-gift" type="radio"/>
-                    <label for="special-gift-4"></label>
+                    <label class="radio-violet-label" for="special-gift-4"></label>
                 </li>
 
             </ul>
@@ -528,33 +535,119 @@
 
         </div>
 
-        <div class="cart-promo-code"></div>
+        <div class="cart-promo-code left-column">
 
-        <div class="cart-delivery"></div>
+            <div class="promo-code">
 
-        <div class="cart-order">
+                <label><input class="form-field" type="text" id="cart-promo-code" placeholder="Введите промо-код"/></label>
 
+                <input class="button-violet-filled" id="cart-promo-code-submit" type="button" value="Применить"/>
 
+            </div>
 
-        </div>
-
-        <div class="cart-payment">
-
-            <p class="sub-title">Способ оплаты</p>
-
-            <p class="text">Выберите удобный способо оплаты для этого заказа</p>
-
-            <input class="radio-violet hidden" id="cart-payment-1" name="cart-payment" type="radio"/>
-            <label for="cart-payment-1">Visa / Mastercard</label>
-
-            <input class="radio-violet hidden" id="cart-payment-2" name="cart-payment" type="radio" checked/>
-            <label for="cart-payment-2">Банковский перевод</label>
+            <p>
+                Убедитесь в том, что Ваш код бонуса действителен и используется в заказе только один раз. Подробнее о том  как воспользоваться кодом бонуса можно узнать в рубрике <a href="#">FAQ</a>
+            </p>
 
         </div>
 
-        <a href="#" class="to-back left-column">Назад</a>
+        <div class="result-with-delivery right-column">
 
-        <input class="form-submit right-column" type="submit" value="Оформить заказ"/>
+            <ul>
+
+                <li class="clearfix">
+                    <div class="gifts-number left-column"><span class="product-number">1</span> товар = <span class="gift-number">0</span> подарков</div>
+                    <div class="partial-summa right-column"><span>1300</span> руб</div>
+                </li>
+
+                <li class="clearfix">
+                    <div class="text left-column">Доставка</div>
+                    <div class="shortfall-for-free">До бесплатной доставки осталось <span>625</span> руб</div>
+                    <div class="full-summa right-column"><span>199</span> руб</div>
+                </li>
+
+                <li class="clearfix">
+                    <div class="text">Общая сумма к оплате:</div>
+                    <div class="full-result-summa"><span>1600</span> руб</div>
+                </li>
+
+            </ul>
+
+            <a href="#" class="continue-shopping left-column">Продолжить покупки</a>
+
+            <a href="#" class="to-delivery button-violet-filled right-column">Перейти к доставке</a>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="cart-order clearfix">
+
+            <p class="title">Оформление заказа</p>
+
+            <div class="user-info left-column">
+
+                <p class="sub-title">Информация для оплаты и доставки заказа</p>
+
+                <label><input class="form-field" type="text" id="user-name" placeholder="ФИО"/></label>
+
+                <label><input class="form-field" type="email" id="user-email" placeholder="E-mail" required/></label>
+
+                <label><input class="form-field" type="tel" id="user-phone" placeholder="Телефон"/></label>
+
+                <label><input class="form-field" type="text" id="user-address" placeholder="Адрес доставки"/></label>
+
+            </div>
+
+            <div class="cart-delivery right-column">
+
+                <p class="sub-title">Способ доставки</p>
+
+                <p class="text">Выберите удобный способ доставки для этого заказа:</p>
+
+                <div class="free-delivery clearfix">
+                    <div class="left-column">
+                        <input class="radio-violet hidden" id="cart-delivery-1" name="cart-delivery" type="radio"/>
+                        <label class="radio-violet-label" for="cart-delivery-1">Бесплатная доставка</label>
+                    </div>
+                    <div class="free-delivery-cost right-column">(<span>350</span> руб)</div>
+                </div>
+
+                <div class="courier-delivery clearfix">
+                    <div class="left-column">
+                        <input class="radio-violet hidden" id="cart-delivery-2" name="cart-delivery" type="radio" checked/>
+                        <label class="radio-violet-label" for="cart-delivery-2">Курьерская доставка</label>
+                    </div>
+                    <a href="#" class="to-carrier-fees right-column">Смотреть тарифы перевозчика</a>
+                </div>
+
+                <label><textarea  id="user-comment" cols="" rows="" placeholder="Вы можете добавить коментарий к своему заказу"></textarea></label>
+
+            </div>
+
+            <div class="cart-payment left-column">
+
+                <p class="sub-title">Способ оплаты</p>
+
+                <p class="text">Выберите удобный способо оплаты для этого заказа</p>
+
+                <input class="radio-violet hidden" id="cart-payment-1" name="cart-payment" type="radio"/>
+                <label class="radio-violet-label" for="cart-payment-1">Visa / Mastercard</label>
+
+                <input class="radio-violet hidden" id="cart-payment-2" name="cart-payment" type="radio" checked/>
+                <label class="radio-violet-label" for="cart-payment-2">Банковский перевод</label>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <a href="#" class="continue-shopping to-back left-column">Назад</a>
+
+        <input class="form-submit button-violet-filled right-column" type="submit" value="Оформить заказ"/>
 
     </form>
 
