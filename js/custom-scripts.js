@@ -99,7 +99,6 @@ $(document).ready(function () {
     $('.product-counter .control').click(function() {
 
         var inputValue = parseInt($(this).siblings('label').find('input').val());
-        var costValue  = parseInt($(this).parents('.product').find('.cost-value').html());
 
         if($(this).hasClass('increment')) {
             inputValue++;
@@ -167,6 +166,18 @@ $(document).ready(function () {
 
     $(function($) {
         $('#form-mailing').validatr({
+            showall: true
+        });
+    });
+
+    $(function($) {
+        $('#form-sign-in').validatr({
+            showall: true
+        });
+    });
+
+    $(function($) {
+        $('#form-sign-up').validatr({
             showall: true
         });
     });

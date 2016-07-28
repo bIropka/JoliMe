@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Category page</title>
+    <title>Sign page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/jquery-ui.min.css"/>
     <link rel="stylesheet" href="css/slick.css"/>
@@ -260,58 +260,66 @@
         </div>
 
     </div>
+    
+    <div class="header-bottom">
+        
+        <ul class="block-content in-wide">
+            <li>100% экологичен</li>
+            <li>Сертификаты соответствия и лицензии</li>
+            <li>Бесплатная доставка</li>
+        </ul>
+        
+    </div>
 
 </div>
 
-<div class="blog-content blog-list-content">
+<div class="block-content">
 
-    <div class="block-content">
+    <ul class="breadcrumbs">
+        <li><a href="index.html">Главная страница </a></li>
+        <li><a href="#">Средства гигиены для ванны и душа</a></li>
+        <li>Мыло ручной работы</li>
+    </ul>
 
-        <ul class="breadcrumbs">
-            <li><a href="index.html">Главная страница </a></li>
-            <li>Блог</li>
-        </ul>
+    <div class="sign-content clearfix">
 
-        <ul class="articles-list clearfix">
-            <li>
-                <img src="images/image-article.jpg" alt="img"/>
-                <h2>Sante Family: семейные ценности в чистоте и заботе</h2>
-                <a href="#" class="marker"></a>
-            </li>
-            <li class="left-column no-image">
-                <img src="images/no-image-dark.png" alt="img"/>
-                <h2>Sante Family: семейные ценности в чистоте и заботе Sante Family: семейные ценности в чистоте и заботе</h2>
-                <a href="#" class="marker"></a>
-            </li>
-            <li class="right-column">
-                <img src="images/image-article.jpg" alt="img"/>
-                <h2>Sante Family: семейные ценности в чистоте и заботе</h2>
-                <a href="#" class="marker"></a>
-            </li>
-        </ul>
+        <form action="#" id="form-sign-in" class="form-sign-in left-column">
 
-        <a href="#" class="show-more-items">Показать еще</a>
+            <h2>Войти</h2>
 
-        <div class="list-bottom clearfix">
+            <p class="text">Войти в личный кабинет</p>
 
-            <div class="products-statistic left-column">Показано товаров: <span class="products-visible-number">1 - 6</span> из <span class="products-number">220</span></div>
+            <label><input type="text" id="sign-in-email" class="form-field  field-email" placeholder="E-mail" required/></label>
 
-            <ul class="pages-control right-column">
-                <li class="active"><a class="no-underline" href="#">1</a></li>
-                <li><a class="no-underline" href="#">2</a></li>
-                <li><a class="no-underline" href="#">3</a></li>
-                <li><a class="no-underline" href="#">4</a></li>
-                <li><a class="no-underline" href="#">5</a></li>
-                <li><a class="no-underline" href="#">6</a></li>
-                <li><a class="no-underline" href="#">7</a></li>
-                <li><a class="no-underline" href="#">8</a></li>
-                <li><a class="no-underline" href="#">9</a></li>
-                <li><a class="no-underline" href="#">10</a></li>
-                <li><a class="no-underline" href="#">...</a></li>
-                <li><a class="no-underline" href="#">80</a></li>
-            </ul>
+            <label><input type="text" id="sign-in-password" class="form-field" placeholder="Пароль" required/></label>
 
-        </div>
+            <button type="submit" class="form-submit button-violet-filled">Войти в личный кабинет</button>
+
+            <a href="" class="forget-password">Забыли пароль?</a>
+
+        </form>
+
+        <form action="#" id="form-sign-up" class="form-sign-up right-column">
+
+            <h2>Регистрация</h2>
+
+            <p class="text">Создание учетной записи поможет покупать быстрее. Вы сможете контролировать состо яние заказа, а так же просматривать заказы сделаные ранее</p>
+
+            <p class="prompt">При регистрации Личного Кабинета, просим Вас указывать реальные данные.</p>
+
+            <label><input type="text" id="sign-up-name" class="form-field" placeholder="Имя" required/></label>
+
+            <label><input type="email" id="sign-up-email" class="form-field  field-email" placeholder="E-mail" required/></label>
+
+            <label><input type="text" id="sign-up-phone" class="form-field" placeholder="Номер телефона" required/></label>
+
+            <label><input type="text" id="sign-up-password" class="form-field" placeholder="Пароль" required/></label>
+
+            <label><input type="text" id="sign-up-re-password" class="form-field" placeholder="Повторить пороль" required/></label>
+
+            <button type="submit" class="form-submit button-violet-filled">Зарегистрироваться</button>
+
+        </form>
 
     </div>
 
