@@ -2061,7 +2061,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 .cart-item li {
     display: block;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
 }
@@ -2069,6 +2069,7 @@ nav ul li a:hover, nav ul li a.active {
     display: inline-block;
     vertical-align: middle;
     width: 12%;
+    text-align: center;
 }
 .cart-item li:first-child {
     border-top: 1px solid #e7e7e7;
@@ -2084,14 +2085,15 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 14px;
     color: #000000;
 }
-.cart-item li:first-child>div:first-child {
-    width: 52%;
-}
 .cart-item li:first-child>div:last-child {
     border-right: 1px solid #e7e7e7;
+    width: 12%;
 }
 .cart-item .cart-product {
-    width: 50%;
+    width: 52%;
+}
+.cart-item .cart-summa {
+    width: 10%;
 }
 .cart-product-image {
     display: inline-block;
@@ -2112,7 +2114,7 @@ nav ul li a:hover, nav ul li a.active {
 .cart-product-info {
     display: inline-block;
     vertical-align: middle;
-    width: 300px;
+    width: 65%;
     text-align: left;
     margin-left: 25px;
 }
@@ -2152,9 +2154,6 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Helvetica Neuecyr Bold', sans-serif;
     font-size: 14px;
     color: #ff0000;
-}
-.cart-item .cart-discount {
-
 }
 .cart-item .cart-amount .current-value {
     font-size: 14px;
@@ -2209,9 +2208,6 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 16px;
     color: #1c1c1c;
     margin-left: 20px;
-    height: auto;
-    max-height: 70px;
-    overflow-y: hidden;
 }
 .gifts .product-cost, .gifts .product-cost span {
     width: 13%;
@@ -2247,6 +2243,7 @@ nav ul li a:hover, nav ul li a.active {
 .special-gifts ul li {
     padding: 20px;
     width: 23%;
+    min-width: 240px;
     border: 1px solid #e7e7e7;
     -moz-text-align-last: left;
     -ms-text-align-last: left;
@@ -2290,6 +2287,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .cart-promo-code {
     width: 37%;
+    min-width: 300px;
     border: 1px solid #e7e7e7;
     background: #f8f8f8;
     padding: 35px 25px 30px;
@@ -2354,6 +2352,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .result-with-delivery {
     width: 60%;
+    max-width: 670px;
     margin-top: 60px;
 }
 .result-with-delivery ul {
@@ -2387,7 +2386,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #000000;
 }
 .shortfall-for-free {
-    width: 50%;
+    width: 55%;
     margin-right: 30px;
 }
 .shortfall-for-free, .shortfall-for-free span {
@@ -2423,9 +2422,9 @@ nav ul li a:hover, nav ul li a.active {
 }
 .cart-order .user-info {
     width: 37%;
+    min-width: 290px;
     border: 1px solid #e7e7e7;
     padding: 25px;
-    min-width: 290px;
 }
 .cart-order .sub-title {
     font-family: 'Open Sans Semibold', sans-serif;
@@ -2459,6 +2458,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .cart-order .cart-delivery {
     width: 60%;
+    max-width: 670px;
     border: 1px solid #e7e7e7;
     padding: 25px;
 }
@@ -2508,6 +2508,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .cart-payment {
     width: 37%;
+    min-width: 290px;
     border: 1px solid #e7e7e7;
     margin: 30px 0;
     padding: 25px;
@@ -3056,6 +3057,44 @@ nav ul li a:hover, nav ul li a.active {
     .product-item .product-image {
         margin-bottom: 20px;
     }
+    .cart-promo-code, .result-with-delivery, .user-info, .cart-delivery, .cart-payment {
+        display: block;
+        float: none;
+        margin: 0 0 40px;
+    }
+    .promo-code .form-field::-webkit-input-placeholder {font-size: 12px;}
+    .promo-code .form-field::-moz-placeholder {font-size: 12px;}
+    .promo-code .form-field:-moz-placeholder {font-size: 12px;}
+    .promo-code .form-field:-ms-input-placeholder {font-size: 12px;}
+    .result-with-delivery, .cart-order .cart-delivery {
+        width: 100%;
+    }
+    .cart-item .cart-summa {
+        width: 9%;
+    }
+    .gifts li {
+        padding: 20px 0;
+    }
+    .gift-description {
+        width: 70%;
+    }
+    .gifts .product-cost, .gifts .more-info {
+        width: 20%;
+    }
+    .gifts .more-info {
+        width: auto;
+        margin: 0 10px;
+    }
+    .special-gifts ul {
+        -moz-text-align-last: center;
+        -ms-text-align-last: center;
+        text-align-last: center;
+        text-align: center;
+    }
+    .special-gifts ul li {
+        margin: 10px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -3158,6 +3197,29 @@ nav ul li a:hover, nav ul li a.active {
     .breadcrumbs {
         margin: 20px 0;
     }
+    .cart-item li:first-child {
+        display: none;
+    }
+    .cart-item li {
+        border-top: 1px solid #e7e7e7;
+        border-bottom: none;
+        padding: 20px 0;
+    }
+    .cart-item li:last-child {
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .cart-item li>div, .cart-item .cart-summa {
+        width: 24%;
+    }
+    .cart-item .cart-product {
+        width: 100%;
+    }
+    .gifts .add-to-cart {
+        width: 160px;
+    }
+    .gift-description {
+        font-size: 14px;
+    }
 
 }
 @media (max-width: 540px) {
@@ -3219,6 +3281,13 @@ nav ul li a:hover, nav ul li a.active {
     .product-more-info .control-panel .active:hover p, .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
         font-size: 15px;
     }
+    .gift-description {
+        width: 60%;
+        margin-bottom: 15px;
+    }
+    .gift-image {
+        margin-bottom: 15px;
+    }
 }
 @media (max-width: 480px) {
     .block-content {
@@ -3262,6 +3331,36 @@ nav ul li a:hover, nav ul li a.active {
     .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
         font-size: 13px;
     }
+    .shortfall-for-free {
+        width: 40%;
+    }
+    .shortfall-for-free, .shortfall-for-free span {
+        font-size: 12px;
+    }
+    .result-with-delivery .continue-shopping, .result-with-delivery .to-delivery {
+        display: inline-block;
+        float: none;
+        margin: 10px 0;
+    }
+    .result-with-delivery .to-delivery {
+        font-size: 14px;
+    }
+    .to-carrier-fees, .courier-delivery .left-column {
+        display: block;
+        float: none;
+    }
+    .to-carrier-fees {
+        margin-top: 5px;
+    }
+    .gifts .add-to-cart {
+        margin-top: 15px;
+    }
+    .gift-description {
+        width: 50%;
+    }
+    .form-cart h2 {
+        margin: 30px 10px 20px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -3269,4 +3368,22 @@ nav ul li a:hover, nav ul li a.active {
     .product-more-info .control-panel li p, .product-more-info .control-panel .active p {
         font-size: 11px;
     }
+    .gifts .product-cost {
+        width: auto;
+    }
+    .cart-item li {
+        text-align: center;
+    }
+    .cart-item li>div, .cart-item .cart-summa {
+        width: auto;
+        margin: 10px;
+    }
+    .cart-item .cart-product {
+        margin: 10px 0;
+    }
+    .cart-product-info {
+        width: 100%;
+        margin: 10px 0;
+    }
+
 }
