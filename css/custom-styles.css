@@ -1943,7 +1943,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #242424;
     margin-bottom: 25px;
 }
-.item-content .product-card, .form-cart .product-card {
+.item-content .product-card, .form-cart .product-card, .search-content .product-card {
     width: 32%;
     min-width: 290px;
 }
@@ -2763,8 +2763,39 @@ nav ul li a:hover, nav ul li a.active {
 
 .blog-content .list-bottom {
     width: 100%;
-
 }
+
+/**********************
+***** SEARCH PAGE *****
+**********************/
+.search-content h1 {
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 22px;
+    color: #232323;
+    margin-bottom: 15px;
+}
+.search-content .search-request {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #cecece;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 12px;
+    color: #2e2e2e;
+    padding-left: 30px;
+    position: relative;
+}
+.search-content .search-request:before {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url('../images/icon-search.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+
 
 /* footer */
 .footer {
