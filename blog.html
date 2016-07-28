@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/iThing-min.css"/>
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="burger"></div>
+
+    <div class="mobile-menu">
+
+        <a class="logo" href="index.html"></a>
+
+        <div class="mobile-menu-title top-menu-title">Информация</div>
+
+        <div class="mobile-menu-title main-menu-title active">Категории</div>
+
+    </div>
+
+    <div class="block-content header-top clearfix">
+
+        <ul class="left-column top-menu">
+            <li><a class="no-underline" href="#">Интернет магазин</a></li>
+            <li><a class="no-underline active" href="#">Оплата и доставка</a></li>
+            <li><a class="no-underline" href="#">О нас</a></li>
+            <li><a class="no-underline" href="#">Сервис</a></li>
+            <li><a class="no-underline" href="#">Блог</a></li>
+            <li><a class="no-underline" href="#">Контакты</a></li>
+        </ul>
+
+        <div class="right-column">
+
+            <form action="#" id="form-search" class="form-search">
+
+                <label><input id="search-field" type="text" placeholder="Что хотите найти?"/></label>
+
+                <input class="form-submit" type="submit" value=""/>
+
+                <div class="show-search"></div>
+
+            </form>
+
+            <form action="#" id="form-locals" class="form-locals">
+
+                <div class="current-local">
+                    <span class="flag flag-rus"></span>
+                    <span class="text">RU</span>
+                </div>
+
+                <ul class="form-pop-up">
+
+                    <li>
+                        <input class="radio-violet hidden" id="locals-rus" name="locals-radio" type="radio" checked/>
+                        <label for="locals-rus">
+                            <span class="marker"></span>
+                            <span class="flag flag-rus"></span>
+                            <span class="text">RU</span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <input class="radio-violet hidden" id="locals-lat" name="locals-radio" type="radio"/>
+                        <label for="locals-lat">
+                            <span class="marker"></span>
+                            <span class="flag flag-lat"></span>
+                            <span class="text">LAV</span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <input class="radio-violet hidden" id="locals-usa" name="locals-radio" type="radio"/>
+                        <label for="locals-usa">
+                            <span class="marker"></span>
+                            <span class="flag flag-usa"></span>
+                            <span class="text">USA</span>
+                        </label>
+                    </li>
+
+                </ul>
+
+            </form>
+
+            <a class="sign-mobile" href="#"></a>
+
+        </div>
+
+    </div>
+
+    <div class="header-nav">
+
+        <nav class="block-content">
+
+            <ul class="in-wide main-menu">
+                <li><a class="no-underline active" href="#">Акции</a></li>
+                <li><a class="no-underline" href="#">Мыло</a></li>
+                <li><a class="no-underline" href="#">Бомбочки для ванны</a></li>
+                <li><a class="no-underline" href="#">Свечи</a></li>
+                <li><a class="no-underline" href="#">Саше</a></li>
+                <li><a class="no-underline" href="#">Соль для ванны</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+    
+    <div class="block-content header-info clearfix">
+
+        <div class="left-column">
+
+            <a class="phone-number no-underline" href="tel:+87012230449">8 701 223 04 49</a>
+
+            <a class="email" href="mailto:info@jolyMe.lv">info@jolyMe.lv</a>
+
+        </div>
+
+        <a href="index.html" class="logo"></a>
+
+        <div class="right-column">
+
+            <div class="sign-block">
+
+                <a class="sign-in" href="#">Вход</a>
+
+                <a class="sign-up" href="#">Регистрация</a>
+
+            </div>
+
+            <div class="basket-block">
+
+                <p class="basket-visible">
+                    <span class="icon-basket"></span> (<span class="basket-value">4</span>)
+                </p>
+
+                <form action="#" id="form-basket-order" class="form-basket-order">
+
+                    <p class="title">Недавно добавленные</p>
+
+                    <ul>
+
+                        <li class="product basket-product clearfix">
+
+                            <div class="left-column">
+                                <img src="images/image-product-small.png" alt="product"/>
+                                <div class="product-counter in-wide">
+                                    <div class="decrement control">-</div>
+                                    <div class="current-value"></div>
+                                    <div class="increment control">+</div>
+                                    <label><input type="number" class="hidden" value="1"/></label>
+                                </div>
+                            </div>
+
+                            <div class="right-column">
+                                <h5>Stenders</h5>
+                                <p class="product-description">Свеча обогащеная экстрактами маракуи и еще чего-то там очень пахучего</p>
+                                <p class="product-cost">
+                                    <span class="cost-text">Сумма:</span>
+                                    <span class="cost-value">1500</span>
+                                    <span class="cost-currency">руб</span>
+                                </p>
+                            </div>
+
+                            <div class="close-marker">x</div>
+
+                        </li>
+
+                        <li class="product basket-product clearfix">
+
+                            <div class="left-column">
+                                <img src="images/image-product-small.png" alt="product"/>
+                                <div class="product-counter in-wide">
+                                    <div class="decrement control">-</div>
+                                    <div class="current-value"></div>
+                                    <div class="increment control">+</div>
+                                    <label><input type="number" class="hidden" value="1"/></label>
+                                </div>
+                            </div>
+
+                            <div class="right-column">
+                                <h5>Stenders</h5>
+                                <p class="product-description">Свеча обогащеная экстрактами маракуи и еще чего-то там очень пахучего</p>
+                                <p class="product-cost">
+                                    <span class="cost-text">Сумма:</span>
+                                    <span class="cost-value">1500</span>
+                                    <span class="cost-currency">руб</span>
+                                </p>
+                            </div>
+
+                            <div class="close-marker">x</div>
+
+                        </li>
+
+                        <li class="product basket-product clearfix">
+
+                            <div class="left-column">
+                                <img src="images/image-product-small.png" alt="product"/>
+                                <div class="product-counter in-wide">
+                                    <div class="decrement control">-</div>
+                                    <div class="current-value"></div>
+                                    <div class="increment control">+</div>
+                                    <label><input type="number" class="hidden" value="1"/></label>
+                                </div>
+                            </div>
+
+                            <div class="right-column">
+                                <h5>Stenders</h5>
+                                <p class="product-description">Свеча обогащеная экстрактами маракуи и еще чего-то там очень пахучего</p>
+                                <p class="product-cost">
+                                    <span class="cost-text">Сумма:</span>
+                                    <span class="cost-value">1500</span>
+                                    <span class="cost-currency">руб</span>
+                                </p>
+                            </div>
+
+                            <div class="close-marker">x</div>
+
+                        </li>
+
+                        <li class="product basket-product clearfix">
+
+                            <div class="left-column">
+                                <img src="images/image-product-small.png" alt="product"/>
+                                <div class="product-counter in-wide">
+                                    <div class="decrement control">-</div>
+                                    <div class="current-value"></div>
+                                    <div class="increment control">+</div>
+                                    <label><input type="number" class="hidden" value="1"/></label>
+                                </div>
+                            </div>
+
+                            <div class="right-column">
+                                <h5>Stenders</h5>
+                                <p class="product-description">Свеча обогащеная экстрактами маракуи, чего-то там очень пахучего</p>
+                                <div class="product-cost">
+                                    <span class="cost-text">Сумма:</span>
+                                    <span class="cost-value">1500</span>
+                                    <span class="cost-currency">руб</span>
+                                </div>
+                            </div>
+
+                            <div class="close-marker">x</div>
+
+                        </li>
+                        
+                    </ul>
+
+                    <input type="submit" value="Оформить заказ"/>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="blog-content blog-list-content">
+
+    <div class="block-content">
+
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная страница </a></li>
+            <li>Блог</li>
+        </ul>
+
+        <ul class="articles-list clearfix">
+            <li>
+                <img src="images/image-article.jpg" alt="img"/>
+                <h2>Sante Family: семейные ценности в чистоте и заботе</h2>
+                <a href="#" class="marker"></a>
+            </li>
+            <li class="left-column no-image">
+                <img src="images/no-image-dark.png" alt="img"/>
+                <h2>Sante Family: семейные ценности в чистоте и заботе Sante Family: семейные ценности в чистоте и заботе</h2>
+                <a href="#" class="marker"></a>
+            </li>
+            <li class="right-column">
+                <img src="images/image-article.jpg" alt="img"/>
+                <h2>Sante Family: семейные ценности в чистоте и заботе</h2>
+                <a href="#" class="marker"></a>
+            </li>
+        </ul>
+
+        <a href="#" class="show-more-items">Показать еще</a>
+
+        <div class="list-bottom clearfix">
+
+            <div class="products-statistic left-column">Показано товаров: <span class="products-visible-number">1 - 6</span> из <span class="products-number">220</span></div>
+
+            <ul class="pages-control right-column">
+                <li class="active"><a class="no-underline" href="#">1</a></li>
+                <li><a class="no-underline" href="#">2</a></li>
+                <li><a class="no-underline" href="#">3</a></li>
+                <li><a class="no-underline" href="#">4</a></li>
+                <li><a class="no-underline" href="#">5</a></li>
+                <li><a class="no-underline" href="#">6</a></li>
+                <li><a class="no-underline" href="#">7</a></li>
+                <li><a class="no-underline" href="#">8</a></li>
+                <li><a class="no-underline" href="#">9</a></li>
+                <li><a class="no-underline" href="#">10</a></li>
+                <li><a class="no-underline" href="#">...</a></li>
+                <li><a class="no-underline" href="#">80</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footer-top">
+
+        <ul class="block-content in-wide">
+            <li>100% натуральная</li>
+            <li>Понятный состав косметики</li>
+            <li>Ручная работа</li>
+            <li>Весь товар в наличии</li>
+        </ul>
+
+    </div>
+
+    <div class="footer-middle">
+
+        <ul class="block-content in-wide">
+
+            <li class="footer-links">
+
+                <p class="title">JoliMe</p>
+
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+
+            </li>
+
+            <li class="footer-links">
+
+                <p class="title">Сервис</p>
+
+                <ul>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Программа лояльности</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+            </li>
+
+            <li class="footer-links">
+
+                <p class="title">Помощь покупателю</p>
+
+                <ul>
+                    <li><a href="#">Как оформить заказ</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Условия доставки</a></li>
+                    <li><a href="#">Самовывоз</a></li>
+                </ul>
+
+            </li>
+
+            <li class="footer-links social">
+
+                <p class="title">Мы в соцсетях</p>
+
+                <ul>
+                    <li><a href="#"><img src="images/icon-inst.png" alt="inst"/></a></li>
+                    <li><a href="#"><img src="images/icon-fb.png" alt="fb"/></a></li>
+                </ul>
+
+                <p class="sub-title">Отдел обслуживания:</p>
+
+                <a class="phone-number" href="tel:+87012230449">8 701 223 04 49</a>
+
+            </li>
+
+            <li class="footer-links payment">
+
+                <p class="title">Способы оплаты</p>
+
+                <div class="payment-image"><img src="images/image-visa.png" alt="payment-visa"/></div>
+
+                <div class="payment-image"><img src="images/image-mastercard.png" alt="payment-mc"/></div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <div class="block-content in-wide">
+
+            <div class="copyrights">2016 JoliMe - Магазин натуральной органической косметики</div>
+
+            <div class="markello-block">Разработка сайта - <a href="#">Markello</a></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/validatr.min.js"></script>
+<script src="js/jQRangeSlider-min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>
