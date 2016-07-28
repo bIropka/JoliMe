@@ -2798,9 +2798,76 @@ nav ul li a:hover, nav ul li a.active {
 /**********************
 ***** CONTACTS PAGE *****
 **********************/
+.contacts-content {
+    margin-top: 40px;
+}
+.contacts-content .sidebar {
+    position: static;
+    border: 1px solid #e7e7e7;
+    padding: 25px;
+}
+.contacts-content .sidebar .title {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 16px;
+    color: #242424;
+}
+.sidebar-links {
+    margin-bottom: 20px;
+}
+.sidebar-links ul li {
+    display: block;
+    margin: 10px 0 0 10px;
+}
+.sidebar-links ul li a {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 14px;
+    color: #3f3f3f;
+    text-decoration: none;
+}
+.sidebar-links ul li a:hover, .sidebar-links ul .active a {
+    color: #a875ad;
+}
 
-
-
+.contacts-content .main-panel {
+    border-left: none;
+    background: none;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+.contacts-content h1 {
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 24px;
+    color: #242424;
+    margin: 15px 0 5px;
+}
+.contacts-content .main-panel .text {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #232323;
+}
+.contacts-content .main-panel .phone-number {
+    display: block;
+    font-family: 'Helvetica Neuecyr Bold', sans-serif;
+    font-size: 40px;
+    color: #a875ad;
+    margin: 20px 0 5px;
+    text-decoration: none;
+}
+.contacts-content .main-panel .email {
+    font-family: 'Helvetica Neuecyr Thin', sans-serif;
+    font-size: 22px;
+    color: #a875ad;
+}
+.contacts-content .main-panel .shop-hours {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #7a7a7a;
+    margin: 10px 0 25px;
+}
+.contacts-content .main-panel .on-map {
+    width: 490px;
+    height: 325px;
+}
 
 /* footer */
 .footer {
@@ -3385,6 +3452,27 @@ nav ul li a:hover, nav ul li a.active {
     .articles-list li h2 {
         font-size: 24px;
     }
+    .contacts-content {
+        margin: 0 0 30px;
+    }
+    .contacts-content .sidebar {
+        border: none;
+        padding: 10px;
+    }
+    .sidebar-links {
+        display: inline-block;
+        text-align: left;
+        margin: 10px 20px;
+    }
+    .sidebar-links ul li {
+        margin-left: 0;
+    }
+    .contacts-content .main-panel {
+        padding: 0;
+    }
+    .contacts-content .main-panel .on-map {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3623,6 +3711,9 @@ nav ul li a:hover, nav ul li a.active {
         font-size: 18px;
         max-height: 115px;
     }
+    .contacts-content .sidebar {
+        text-align: left;
+    }
 }
 @media (max-width: 480px) {
     .block-content {
@@ -3722,6 +3813,9 @@ nav ul li a:hover, nav ul li a.active {
     }
     .list-bottom .pages-control li {
         padding: 0 4px 0 4px;
+    }
+    .contacts-content .main-panel .phone-number {
+        font-size: 32px;
     }
 
 }
