@@ -1791,6 +1791,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Helvetica Neuecyr Medium', sans-serif;
     font-size: 14px;
     color: #a875ad;
+    text-decoration: none;
 }
 .product-item .product-measure {
     display: inline-block;
@@ -1946,6 +1947,9 @@ nav ul li a:hover, nav ul li a.active {
 .item-content .product-card, .form-cart .product-card, .search-content .product-card {
     width: 32%;
     min-width: 290px;
+}
+.you-should-like {
+    margin-top: 50px;
 }
 
 /**********************
