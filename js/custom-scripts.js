@@ -297,4 +297,49 @@ $(document).ready(function () {
      End of category page scripts
      ************************/
 
+    /*************************
+     Category page scripts
+     ************************/
+
+    $('.slider-blog').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendArrows: '.slider-blog-control',
+        prevArrow: '.slider-blog-left',
+        nextArrow: '.slider-blog-right',
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 541,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 361,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    /*************************
+     End of category page scripts
+     ************************/
+
 });
