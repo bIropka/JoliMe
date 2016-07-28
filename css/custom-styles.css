@@ -192,6 +192,10 @@ img {
     border: 1px solid #765385;
 }
 
+.validatr-message {
+    display: none;
+}
+
 .invalid-field {
     border: 1px solid #ff0000!important;
     background: transparent url('../images/icon-invalid.png') no-repeat 95% center;
@@ -990,9 +994,6 @@ nav ul li a:hover, nav ul li a.active {
 .form-mailing .field-email::-moz-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
 .form-mailing .field-email:-moz-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
 .form-mailing .field-email:-ms-input-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
-.validatr-message {
-    display: none;
-}
 .form-mailing .form-submit {
     display: inline-block;
     width: 133px;

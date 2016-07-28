@@ -8,7 +8,6 @@ $(document).ready(function () {
 
     for (var i = 0; i < slide.length; i++) {
         var imagePath = image[i].getAttribute('src');
-        console.log('url("' + imagePath + '")');
         $(slide[i]).css('background-image', 'url("' + imagePath + '")');
     }
     /* end of pre-load backgrounds for slider */
@@ -164,25 +163,15 @@ $(document).ready(function () {
         }
     });
 
+
+
     $(function($) {
-        $('#form-mailing').validatr({
+        $('.checked-form').validatr({
             showall: true
         });
     });
 
-    $(function($) {
-        $('#form-sign-in').validatr({
-            showall: true
-        });
-    });
-
-    $(function($) {
-        $('#form-sign-up').validatr({
-            showall: true
-        });
-    });
-
-    $('input[type="submit"]').click(function() {
+    $('.form-submit').click(function() {
         $(this).parent().find('.form-field:invalid').addClass('invalid-field');
         $(this).parent().find('.form-field:valid').addClass('valid-field');
     });
