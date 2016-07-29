@@ -1758,8 +1758,12 @@ nav ul li a:hover, nav ul li a.active {
 }
 .show-more-items:hover {
     background: #ffffff;
+    border: 1px solid #e7e7e7;
 }
 .show-more-items:active, .show-more-items:focus {
+    border: 1px solid #cccccc;
+}
+.show-more-items.active {
     border: 1px solid #cccccc;
     color: transparent;
     background: #ffffff url('../images/more_preloader.gif') no-repeat center;
@@ -2264,6 +2268,10 @@ nav ul li a:hover, nav ul li a.active {
     -ms-text-align-last: left;
     text-align-last: left;
     text-align: left;
+    cursor: pointer;
+}
+.special-gifts ul li:hover {
+    border: 1px solid #a875ad;
 }
 .special-gift-image {
     width: 100%;
@@ -2426,6 +2434,8 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 30px;
     text-align: center;
     text-decoration: none;
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 13px;
 }
 
 .cart-order {
@@ -2717,7 +2727,7 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 15px;
     color: #232323;
     margin: 5px 0;
-    height: 40px;
+    max-height: 40px;
     overflow-y: hidden;
 }
 .article-analogs .article-date {
@@ -2743,9 +2753,14 @@ nav ul li a:hover, nav ul li a.active {
 .articles-list li {
     width: 48%;
     height: 280px;
-    position: relative;
     overflow: hidden;
     margin-bottom: 4%;
+}
+.articles-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 .articles-list li h2 {
     display: inline-block;
@@ -2775,7 +2790,7 @@ nav ul li a:hover, nav ul li a.active {
     -moz-border-radius: 100%;
     border-radius: 100%;
 }
-.articles-list li .marker:hover {
+.articles-list li a:hover .marker {
     background: #ffffff url('../images/sprite-arrows-large.png') no-repeat right center;
     background-size: cover;
 }
@@ -2812,16 +2827,21 @@ nav ul li a:hover, nav ul li a.active {
     color: #232323;
     margin-bottom: 15px;
 }
+.search-content .search-request-wrap {
+    display: block;
+    width: 100%;
+    position: relative;
+}
 .search-content .search-request {
+    width: 100%;
     padding-bottom: 3px;
     border-bottom: 1px solid #cecece;
     font-family: 'Open Sans Light', sans-serif;
     font-size: 12px;
     color: #2e2e2e;
     padding-left: 30px;
-    position: relative;
 }
-.search-content .search-request:before {
+.search-content .search-request-wrap:before {
     content: '';
     display: block;
     width: 13px;
@@ -3484,6 +3504,34 @@ nav ul li a:hover, nav ul li a.active {
     .main-panel-control .products-layout, .sidebar-control {
         display: none;
     }
+    .show-filters {
+        display: block;
+        text-align: right;
+        padding-right: 20px;
+        font-family: 'Helvetica Neuecyr Roman', sans-serif;
+        font-size: 14px;
+        color: #a875ad;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .show-filters:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 5px;
+        background: transparent url('../images/sprite-arrow.png') no-repeat 57% center;
+        background-size: cover;
+        position: absolute;
+        margin: auto;
+        bottom: 0;
+        top: 0;
+        right: 0;
+    }
+    .show-filters.active:after {
+        background: transparent url('../images/sprite-arrow.png') no-repeat 73% center;
+        background-size: cover;
+    }
     .sidebar, .main-panel {
         float: none;
     }
@@ -3491,6 +3539,9 @@ nav ul li a:hover, nav ul li a.active {
         position: static;
         width: 100%;
         text-align: center;
+    }
+    .category-content .sidebar {
+        display: none;
     }
     .sidebar .filter {
         border-bottom: 1px solid #e7e7e7;
@@ -3520,7 +3571,6 @@ nav ul li a:hover, nav ul li a.active {
         max-width: 600px;
         margin: 20px auto 40px;
         padding: 0 12px;
-        height: auto;
         text-align: justify;
     }
     .full-width .product-card {
@@ -3557,6 +3607,10 @@ nav ul li a:hover, nav ul li a.active {
         display: block;
         float: none;
         margin: 0 0 40px;
+    }
+    .cart-payment, .cart-promo-code, .cart-order .user-info {
+        width: 100%;
+        max-width: 400px;
     }
     .promo-code .form-field::-webkit-input-placeholder {font-size: 12px;}
     .promo-code .form-field::-moz-placeholder {font-size: 12px;}
@@ -3636,6 +3690,12 @@ nav ul li a:hover, nav ul li a.active {
     }
     .form-sign-up {
         width: 100%;
+    }
+    .header-bottom.cart-version {
+        display: none;
+    }
+    .header-info.cart-version {
+        border-bottom: 1px solid #e7e7e7;
     }
 
 }
@@ -3798,6 +3858,13 @@ nav ul li a:hover, nav ul li a.active {
     .articles-list li:first-child h2 {
         width: 100%;
     }
+    .article-analogs ul li {
+        width: 140px;
+        margin: 20px 10px;
+    }
+    .article-analogs ul li h4 {
+        font-size: 11px;
+    }
 
 }
 @media (max-width: 540px) {
@@ -3881,6 +3948,17 @@ nav ul li a:hover, nav ul li a.active {
     }
     .form-sign-up .form-submit {
         margin-top: 20px;
+    }
+    .special-gifts ul li {
+        min-width: 140px;
+        margin: 10px 5px;
+        padding: 5px;
+    }
+    .special-gift-name {
+        font-size: 14px;
+    }
+    .special-gift-description {
+        font-size: 11px;
     }
 }
 @media (max-width: 480px) {
@@ -3984,6 +4062,9 @@ nav ul li a:hover, nav ul li a.active {
     }
     .contacts-content .main-panel .phone-number {
         font-size: 32px;
+    }
+    .special-gifts ul li {
+        margin: 4px;
     }
 
 }

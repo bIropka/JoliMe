@@ -68,6 +68,14 @@ $(document).ready(function () {
 
     /** end of scripts for adaptive **/
 
+    $('.show-more-items').click(function() {
+        $(this).addClass('active');
+    });
+
+    $('.special-gifts ul li').click(function() {
+            $(this).find('input').prop('checked', true);
+    });
+
     /** scripts for scrollbar **/
 
     $('.custom-scrollbar').mCustomScrollbar();
@@ -171,7 +179,17 @@ $(document).ready(function () {
         }
     });
 
+    $('.product-more-info .control-panel li').click(function() {
 
+        if(!$(this).hasClass('active')) {
+            var currentIndex = $(this).index();
+            $('.product-more-info .control-panel .active').removeClass('active');
+            $(this).addClass('active');
+            $('.product-more-info .more-content .active').removeClass('active');
+            $('.product-more-info .more-content li').eq(currentIndex).addClass('active');
+        }
+
+    });
 
     $(function($) {
         $('.checked-form').validatr({
@@ -183,6 +201,94 @@ $(document).ready(function () {
         $(this).parent().find('.form-field:invalid').addClass('invalid-field');
         $(this).parent().find('.form-field:valid').addClass('valid-field');
     });
+
+    /*************************
+     Blog page scripts
+     ************************/
+
+    $('.slider-blog').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        appendArrows: '.slider-blog-control',
+        prevArrow: '.slider-blog-left',
+        nextArrow: '.slider-blog-right',
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 541,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 361,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    /*************************
+     End of blog page scripts
+     ************************/
+
+    /** scripts for slider **/
+
+    $('.slider').slick({
+
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    dots: true,
+                    autoplay: false
+                }
+            }
+        ]
+
+    });
+
+    $('.slider-dots li').click(function() {
+
+        $('.slider').slick('slickGoTo', $(this).index());
+
+    });
+
+    $('.slider').on('afterChange', function(event, slick, currentSlide){
+
+        $('.slider-dots .active').toggleClass('active');
+        $('.slider-dots li').eq(currentSlide).toggleClass('active');
+
+    });
+
+    $('.slider-dots li').hover(
+        function() {
+            $('.slider').slick('slickPause');
+        },
+        function() {
+            $('.slider').slick('slickPlay');
+        }
+    );
+
+    /** end of scripts for slider **/
 
     /*************************
      Category page scripts
@@ -232,18 +338,6 @@ $(document).ready(function () {
 
     });
 
-    $('.product-more-info .control-panel li').click(function() {
-
-        if(!$(this).hasClass('active')) {
-            var currentIndex = $(this).index();
-            $('.product-more-info .control-panel .active').removeClass('active');
-            $(this).addClass('active');
-            $('.product-more-info .more-content .active').removeClass('active');
-            $('.product-more-info .more-content li').eq(currentIndex).addClass('active');
-        }
-
-    });
-
     /** script for filter-slider **/
 
     var minPrice = parseInt($('.filter-slider-min').html()), maxPrice = parseInt($('.filter-slider-max').html());
@@ -256,98 +350,15 @@ $(document).ready(function () {
 
     /** end of script for filter-slider **/
 
+    $('.show-filters').click(function() {
+        $(this).toggleClass('active');
+        $('.category-content .sidebar').slideToggle();
+        $("#filter-slider-range").rangeSlider('resize');
+    });
 
 
     /*************************
      End of category page scripts
      ************************/
-
-    /*************************
-     Category page scripts
-     ************************/
-
-    $('.slider-blog').slick({
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        appendArrows: '.slider-blog-control',
-        prevArrow: '.slider-blog-left',
-        nextArrow: '.slider-blog-right',
-        responsive: [
-            {
-                breakpoint: 981,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 541,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 361,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-
-    /*************************
-     End of category page scripts
-     ************************/
-
-    /** scripts for slider **/
-
-    $('.slider').slick({
-
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 769,
-                settings: {
-                    dots: true,
-                    autoplay: false
-                }
-            }
-        ]
-
-    });
-
-    $('.slider-dots li').click(function() {
-
-        $('.slider').slick('slickGoTo', $(this).index());
-
-    });
-
-    $('.slider').on('afterChange', function(event, slick, currentSlide){
-
-        $('.slider-dots .active').toggleClass('active');
-        $('.slider-dots li').eq(currentSlide).toggleClass('active');
-
-    });
-
-    $('.slider-dots li').hover(
-        function() {
-            $('.slider').slick('slickPause');
-        },
-        function() {
-            $('.slider').slick('slickPlay');
-        }
-    );
-
-    /** end of scripts for slider **/
 
 });
