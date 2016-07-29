@@ -184,49 +184,6 @@ $(document).ready(function () {
         $(this).parent().find('.form-field:valid').addClass('valid-field');
     });
 
-    /** scripts for slider **/
-
-    $('.slider').slick({
-
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 769,
-                settings: {
-                    dots: true,
-                    autoplay: false
-                }
-            }
-        ]
-
-    });
-
-    $('.slider-dots li').click(function() {
-
-        $('.slider').slick('slickGoTo', $(this).index());
-
-    });
-
-    $('.slider').on('afterChange', function(event, slick, currentSlide){
-
-        $('.slider-dots .active').toggleClass('active');
-        $('.slider-dots li').eq(currentSlide).toggleClass('active');
-
-    });
-
-    $('.slider-dots li').hover(
-        function() {
-            $('.slider').slick('slickPause');
-        },
-        function() {
-            $('.slider').slick('slickPlay');
-        }
-    );
-
-    /** end of scripts for slider **/
-
     /*************************
      Category page scripts
      ************************/
@@ -349,5 +306,48 @@ $(document).ready(function () {
     /*************************
      End of category page scripts
      ************************/
+
+    /** scripts for slider **/
+
+    $('.slider').slick({
+
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    dots: true,
+                    autoplay: false
+                }
+            }
+        ]
+
+    });
+
+    $('.slider-dots li').click(function() {
+
+        $('.slider').slick('slickGoTo', $(this).index());
+
+    });
+
+    $('.slider').on('afterChange', function(event, slick, currentSlide){
+
+        $('.slider-dots .active').toggleClass('active');
+        $('.slider-dots li').eq(currentSlide).toggleClass('active');
+
+    });
+
+    $('.slider-dots li').hover(
+        function() {
+            $('.slider').slick('slickPause');
+        },
+        function() {
+            $('.slider').slick('slickPlay');
+        }
+    );
+
+    /** end of scripts for slider **/
 
 });
