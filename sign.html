@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog single page</title>
+    <title>Sign page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
     <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/iThing-min.css"/>
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
@@ -259,119 +261,66 @@
         </div>
 
     </div>
+    
+    <div class="header-bottom">
+        
+        <ul class="block-content in-wide">
+            <li>100% экологичен</li>
+            <li>Сертификаты соответствия и лицензии</li>
+            <li>Бесплатная доставка</li>
+        </ul>
+        
+    </div>
 
 </div>
 
-<div class="blog-content">
+<div class="block-content">
 
-    <div class="block-content">
+    <ul class="breadcrumbs">
+        <li><a href="index.html">Главная страница </a></li>
+        <li><a href="#">Средства гигиены для ванны и душа</a></li>
+        <li>Мыло ручной работы</li>
+    </ul>
 
-        <article>
+    <div class="sign-content clearfix">
 
-            <h1>Что делать если выпадают волосы?</h1>
+        <form action="#" id="form-sign-in" class="form-sign-in checked-form left-column">
 
-            <a href="#" class="logo-blog"></a>
+            <h2>Войти</h2>
 
-            <div class="article-date">7 июля 2016</div>
+            <p class="text">Войти в личный кабинет</p>
 
-            <div class="article-category">
-                <p>Образование</p>
-            </div>
+            <label><input type="email" id="sign-in-email" class="form-field  field-email" placeholder="E-mail" required/></label>
 
-            <h2>Samsung GALAXY A5 и Samsung GALAXY A3 полностью металлические смартфоны уже в России</h2>
+            <label><input type="text" id="sign-in-password" class="form-field" placeholder="Пароль" required/></label>
 
-            <p>
-                Компания Samsung Electronics сегодня презентовала в России линейку новых смартфонов в тонких и полностью металлических корпусах – ический корпус, телефоны имеют толщину всего 6,7 и 6,9 мм соответственно.
-            </p>
+            <button type="submit" class="form-submit button-violet-filled">Войти в личный кабинет</button>
 
-            <img class="blog-title-image" src="images/image-blog-single.png" alt=""/>
+            <a href="" class="forget-password">Забыли пароль?</a>
 
-            <p>
-                Новинки не претендуют на место в премиум-классе, где сейчас находятся Galaxy Note 4 и Galaxy Note Edge, ни на звание флагмана серии S, обладающего инновационными характеристиками. Это совершенно интересно и полезно для читателей, многие даже незнаю.
-            </p>
+        </form>
 
-            <div class="slider-blog-wrap">
+        <form action="#" id="form-sign-up" class="form-sign-up checked-form right-column">
 
-                <div class="slider-blog-control slider-blog-left"></div>
-                <div class="slider-blog-control slider-blog-right"></div>
+            <h2>Регистрация</h2>
 
-                <ul class="slider-blog">
-                    <li><img src="images/blog-slide-1.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-2.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-3.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-4.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-5.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-2.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-3.jpg" alt="img"/></li>
-                    <li><img src="images/blog-slide-4.jpg" alt="img"/></li>
-                </ul>
+            <p class="text">Создание учетной записи поможет покупать быстрее. Вы сможете контролировать состо яние заказа, а так же просматривать заказы сделаные ранее</p>
 
-            </div>
+            <p class="prompt">При регистрации Личного Кабинета, просим Вас указывать реальные данные.</p>
 
-            <p>
-                Samsung Electronics сегодня презентовала в России линейку новых смартфонов в тонких и полностью металлических корпусах – ический корпус, телефоны имеют толщину всего 6,7 и 6,9 мм соответственно.
-            </p>
+            <label><input type="text" id="sign-up-name" class="form-field" placeholder="Имя" required/></label>
 
-            <div class="quote">
-                <p>
-                    HYALAX Light – это универсальный препарат на основе гиалуроновой кислоты для коррекции всех типов морщин. Максимально пластичный препарат, который позволяет работать на всех уровнях дермы и получать прогнозируемый и естественный результат.
-                </p>
-                <p>
-                    Препараты Hyalax® Light представляют собой стерильный, биологически разлагаемый, вязкоэластичный,
-                </p>
-            </div>
+            <label><input type="email" id="sign-up-email" class="form-field  field-email" placeholder="E-mail" required/></label>
 
-            <div class="social-likes">
-                <script type="text/javascript">(function() {
-                    if (window.pluso)if (typeof window.pluso.start == "function") return;
-                    if (window.ifpluso==undefined) { window.ifpluso = 1;
-                        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                        s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                        s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                        var h=d[g]('body')[0];
-                        h.appendChild(s);
-                    }})();</script>
-                <div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=08" data-services="facebook,vkontakte,twitter"></div>
-            </div>
+            <label><input type="text" id="sign-up-phone" class="form-field" placeholder="Номер телефона" required/></label>
 
-        </article>
+            <label><input type="text" id="sign-up-password" class="form-field" placeholder="Пароль" required/></label>
 
-        <div class="article-analogs">
+            <label><input type="text" id="sign-up-re-password" class="form-field" placeholder="Повторить пороль" required/></label>
 
-            <h3>Похожие записи</h3>
+            <button type="submit" class="form-submit button-violet-filled">Зарегистрироваться</button>
 
-            <ul class="in-wide">
-                <li>
-                    <a href="#" class="article-image">
-                        <img src="images/blog-slide-4.jpg" alt="img"/>
-                    </a>
-                    <h4 class="article-name"><a href="#">Чем мыть детскую посуду?</a></h4>
-                    <div class="article-date">27.06.2016</div>
-                </li>
-                <li>
-                    <a href="#" class="article-image">
-                        <img src="images/no-image.png" alt="img"/>
-                    </a>
-                    <h4 class="article-name"><a href="#">Доставка заказов в Казахстан и Белоруссию</a></h4>
-                    <div class="article-date">27.06.2016</div>
-                </li>
-                <li>
-                    <a href="#" class="article-image">
-                        <img src="images/blog-slide-3.jpg" alt="img"/>
-                    </a>
-                    <h4 class="article-name"><a href="#">8 фактов в пользу минерального дезодоранта</a></h4>
-                    <div class="article-date">27.06.2016</div>
-                </li>
-                <li>
-                    <a href="#" class="article-image">
-                        <img src="images/blog-slide-1.jpg" alt="img"/>
-                    </a>
-                    <h4 class="article-name"><a href="#">Новинки! Экологичные средства для дома Synergetic</a></h4>
-                    <div class="article-date">27.06.2016</div>
-                </li>
-            </ul>
-
-        </div>
+        </form>
 
     </div>
 
@@ -477,8 +426,10 @@
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
+<script src="js/jQRangeSlider-min.js"></script>
 <script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>

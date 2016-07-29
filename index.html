@@ -5,6 +5,7 @@
     <title>Main page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
 <body>
@@ -13,7 +14,7 @@
 
     <div class="burger"></div>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu hidden-scrollbar">
 
         <div class="logo"></div>
 
@@ -141,7 +142,7 @@
 
                     <p class="title">Недавно добавленные</p>
 
-                    <ul>
+                    <ul class="custom-scrollbar">
 
                         <li class="product basket-product clearfix">
 
@@ -924,13 +925,13 @@
 
 <div class="block-content">
 
-    <form action="#" class="form-mailing" id="form-mailing">
+    <form action="#" class="form-mailing checked-form" id="form-mailing">
 
         <div class="title">Подпишитесь на рассылку и окунитесь в мир растительной косметики</div>
 
-        <label><input class="form-field field-email" type="email" name="mailing-email" id="mailing-email" placeholder="Введите e-mail" required/></label>
+        <label><input class="form-field field-email" type="email" id="mailing-email" placeholder="Введите e-mail" required/></label>
 
-        <input class="form-submit" type="submit" value="Подписаться"/>
+        <button  class="form-submit" type="submit">Подписаться</button>
 
     </form>
 
@@ -1120,6 +1121,7 @@
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

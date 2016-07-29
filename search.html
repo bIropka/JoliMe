@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Category page</title>
+    <title>Search page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="css/slick.css"/>
-    <link rel="stylesheet" href="css/iThing-min.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
 <body>
@@ -15,7 +13,7 @@
 
     <div class="burger"></div>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu hidden-scrollbar">
 
         <a class="logo" href="index.html"></a>
 
@@ -143,7 +141,7 @@
 
                     <p class="title">Недавно добавленные</p>
 
-                    <ul>
+                    <ul class="custom-scrollbar">
 
                         <li class="product basket-product clearfix">
 
@@ -281,469 +279,341 @@
         <li>Мыло ручной работы</li>
     </ul>
 
-    <div class="category-content clearfix">
+    <div class="search-content clearfix">
 
-        <div class="sidebar left-column">
+        <h1>Результаты поиска</h1>
 
-            <div class="sidebar-control clearfix">Параметры <div class="marker right-column"></div></div>
+        <p class="search-request">Мыло ручной работы</p>
 
-            <form action="#" id="form-filter" class="form-filter">
+        <div class="main-panel-control clearfix">
 
-                <div class="filter two-columns">
+            <div class="sort-by">
 
-                    <p class="title">Аромат</p>
+                <div class="text">Сортировка по:</div>
 
-                    <ul>
-                        <li>
-                            <input class="hidden" id="filter-1-1" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-1">Ваниль</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-2" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-2">Малина</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-3" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-3">Ежевика</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-4" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-4">Персик</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-5" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-5">Земляника</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-6" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-6">Олива</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-7" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-7">Кокос</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-1-8" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-8">Кофе</label>
-                        </li>
-                        <li class="hidden">
-                            <input class="hidden" id="filter-1-9" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-9">Кокос</label>
-                        </li>
-                        <li class="hidden">
-                            <input class="hidden" id="filter-1-10" name="filter-1" type="checkbox"/>
-                            <label for="filter-1-10">Кофе</label>
-                        </li>
-                    </ul>
+                <form action="#" id="form-sort-by" class="form-sort-by">
 
-                    <a href="#" class="show-more no-underline">Показать еще</a>
+                    <div class="current-choice">по популярности</div>
 
-                </div>
+                    <div class="form-pop-up hidden">
 
-                <div class="filter one-column">
+                        <div class="text">Сортировка по:</div>
 
-                    <p class="title">Тип кожи</p>
-
-                    <ul>
-                        <li>
-                            <input class="hidden" id="filter-2-1" name="filter-2" type="checkbox"/>
-                            <label for="filter-2-1">Проблемная</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-2-2" name="filter-2" type="checkbox"/>
-                            <label for="filter-2-2">Чувствительная</label>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="show-all"></a>
-
-                </div>
-
-                <div class="filter one-column">
-
-                    <p class="title">Эффект</p>
-
-                    <ul>
-                        <li>
-                            <input class="hidden" id="filter-3-1" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-1">Антицелюлитный</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-3-2" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-2">Восстановление</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-3-3" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-3">Глубокое очищение</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-3-4" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-4">Питание</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-3-5" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-5">Рост волос</label>
-                        </li>
-                        <li>
-                            <input class="hidden" id="filter-3-6" name="filter-3" type="checkbox"/>
-                            <label for="filter-3-6">Увлажнение</label>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="show-all"></a>
-
-                </div>
-
-                <div class="filter filter-slider-wrap">
-
-                    <p class="title">Цена</p>
-
-                    <div class="filter-slider">
-
-                        <div class="legend filter-slider-min">1000</div>
-                        <div class="legend filter-slider-max">30000</div>
-
-                        <div class="filter-slider-range" id="filter-slider-range"></div>
-
-                        <label><input class="hidden" type="text" id="filter-slider-amount"/></label>
+                        <ul>
+                            <li>
+                                <input class="radio-violet hidden" id="sort-by-1" name="sort-by-radio" type="radio" checked/>
+                                <label for="sort-by-1">по популярности</label>
+                            </li>
+                            <li>
+                                <input class="radio-violet hidden" id="sort-by-2" name="sort-by-radio" type="radio"/>
+                                <label for="sort-by-2">новинки</label>
+                            </li>
+                            <li>
+                                <input class="radio-violet hidden" id="sort-by-3" name="sort-by-radio" type="radio"/>
+                                <label for="sort-by-3">товары со скидкой</label>
+                            </li>
+                        </ul>
 
                     </div>
 
-                </div>
+                </form>
 
-                <input class="form-submit" type="submit" value="Применить"/>
+            </div>
 
-                <input class="form-reset" type="reset" value="Сбросить"/>
+            <div class="show-amount">
 
-            </form>
+                <div class="text">Выводить по:</div>
 
-            <div class="category-article">
+                <form action="#" id="form-show-amount" class="form-show-amount">
 
-                <h1 class="title">Гели, кремы, масла для душа</h1>
+                    <div class="current-choice">20</div>
 
-                <p>
-                    Душ - простейшая ежедневная процедура. Но далеко не все знают ее особенности, позволяющие сделать эти 5-10 минут не только приятными, но и максимально полезными.
-                </p>
+                    <div class="form-pop-up hidden">
 
-                <p>
-                    <strong>Итак:</strong><br>
-                    1. Не забудьте смыть
-                </p>
+                        <div class="text">Выводить по:</div>
 
-                <p>
-                    Душ - простейшая ежедневная процедура. Но далеко не все знают ее особенности, позволяющие сделать эти 5-10 минут не только приятными, но и максимально полезными.
-                </p>
+                        <ul>
+                            <li>
+                                <input class="radio-violet hidden" id="show-amount-1" name="show-amount-radio" type="radio" checked/>
+                                <label for="show-amount-1">20</label>
+                            </li>
+                            <li>
+                                <input class="radio-violet hidden" id="show-amount-2" name="show-amount-radio" type="radio"/>
+                                <label for="show-amount-2">50</label>
+                            </li>
+                            <li>
+                                <input class="radio-violet hidden" id="show-amount-3" name="show-amount-radio" type="radio"/>
+                                <label for="show-amount-3">100</label>
+                            </li>
+                        </ul>
 
-                <p>
-                    Душ - простейшая ежедневная процедура. Но далеко не все знают ее особенности, позволяющие сделать эти 5-10 минут не только приятными, но и максимально полезными.
-                </p>
+                    </div>
 
-                <p>
-                    Душ - простейшая ежедневная процедура. Но далеко не все знают ее особенности, позволяющие сделать эти 5-10 минут не только приятными, но и максимально полезными.
-                </p>
+                </form>
 
-                <p>
-                    Душ - простейшая ежедневная процедура. Но далеко не все знают ее особенности, позволяющие сделать эти 5-10 минут не только приятными, но и максимально полезными.
-                </p>
+            </div>
+
+            <div class="view-control right-column">
+
+                <div class="text">Всего <span class="products-number"></span>34 товара</div>
+
+                <div class="products-layout grid-layout active"></div>
+
+                <div class="products-layout line-layout"></div>
 
             </div>
 
         </div>
 
-        <div class="main-panel right-column">
+        <div class="products in-wide">
 
-            <div class="main-panel-control clearfix">
+            <div class="product-card clearfix">
 
-                <div class="sidebar-control hidden">Параметры <div class="marker"></div></div>
+                <div class="marker marker-percent">-50%</div>
 
-                <div class="sort-by">
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-1.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
 
-                    <div class="text">Сортировка по:</div>
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
 
-                    <form action="#" id="form-sort-by" class="form-sort-by">
-
-                        <div class="current-choice">по популярности</div>
-
-                        <div class="form-pop-up hidden">
-
-                            <div class="text">Сортировка по:</div>
-
-                            <ul>
-                                <li>
-                                    <input class="radio-violet hidden" id="sort-by-1" name="sort-by-radio" type="radio" checked/>
-                                    <label for="sort-by-1">по популярности</label>
-                                </li>
-                                <li>
-                                    <input class="radio-violet hidden" id="sort-by-2" name="sort-by-radio" type="radio"/>
-                                    <label for="sort-by-2">новинки</label>
-                                </li>
-                                <li>
-                                    <input class="radio-violet hidden" id="sort-by-3" name="sort-by-radio" type="radio"/>
-                                    <label for="sort-by-3">товары со скидкой</label>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </form>
-
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
                 </div>
 
-                <div class="show-amount">
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
 
-                    <div class="text">Выводить по:</div>
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
 
-                    <form action="#" id="form-show-amount" class="form-show-amount">
-
-                        <div class="current-choice">20</div>
-
-                        <div class="form-pop-up hidden">
-
-                            <div class="text">Выводить по:</div>
-
-                            <ul>
-                                <li>
-                                    <input class="radio-violet hidden" id="show-amount-1" name="show-amount-radio" type="radio" checked/>
-                                    <label for="show-amount-1">20</label>
-                                </li>
-                                <li>
-                                    <input class="radio-violet hidden" id="show-amount-2" name="show-amount-radio" type="radio"/>
-                                    <label for="show-amount-2">50</label>
-                                </li>
-                                <li>
-                                    <input class="radio-violet hidden" id="show-amount-3" name="show-amount-radio" type="radio"/>
-                                    <label for="show-amount-3">100</label>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </form>
-
-                </div>
-
-                <div class="view-control right-column">
-
-                    <div class="text">Всего <span class="products-number"></span>34 товара</div>
-
-                    <div class="products-layout grid-layout active"></div>
-
-                    <div class="products-layout line-layout"></div>
-
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
                 </div>
 
             </div>
 
-            <div class="products in-wide">
+            <div class="product-card clearfix">
 
-                <div class="product-card clearfix">
+                <div class="marker marker-hot">hot</div>
 
-                    <div class="marker marker-percent">-50%</div>
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-2.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
 
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-1.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
 
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
                 </div>
 
-                <div class="product-card clearfix">
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
 
-                    <div class="marker marker-hot">hot</div>
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
 
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-2.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
-
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
-                </div>
-
-                <div class="product-card clearfix">
-
-                    <div class="marker marker-new">new</div>
-
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
-
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
-                </div>
-
-                <div class="product-card clearfix">
-
-                    <div class="marker marker-percent">rec</div>
-
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
-
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
-                </div>
-
-                <div class="product-card clearfix only-full hidden">
-
-                    <div class="marker marker-new">new</div>
-
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
-
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
-                </div>
-
-                <div class="product-card clearfix only-full hidden">
-
-                    <div class="marker marker-percent">rec</div>
-
-                    <a href="#" class="product-card-image-block">
-                        <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
-                        <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
-                        <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
-                    </a>
-
-                    <h4><a href="#" class="no-underline">Stenders</a></h4>
-
-                    <div class="product-counter in-wide">
-                        <div class="decrement control">-</div>
-                        <div class="current-value"></div>
-                        <div class="increment control">+</div>
-                        <label><input type="number" class="hidden" value="1"/></label>
-                    </div>
-
-                    <p class="product-description">C нежным ароматом и цветками календулы</p>
-
-                    <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
-
-                    <div class="product-cost right-column">
-                        <span class="cost-value">3000</span>
-                        <span class="cost-currency">руб</span>
-                    </div>
-
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
                 </div>
 
             </div>
 
-            <a href="#" class="show-more-items">Показать еще</a>
+            <div class="product-card clearfix">
+
+                <div class="marker marker-new">new</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
+
+            <div class="product-card clearfix">
+
+                <div class="marker marker-percent">rec</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
+
+            <div class="product-card clearfix">
+
+                <div class="marker marker-percent">rec</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
+
+            <div class="product-card clearfix">
+
+                <div class="marker marker-percent">rec</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
+
+            <div class="product-card clearfix only-full hidden">
+
+                <div class="marker marker-new">new</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
+
+            <div class="product-card clearfix only-full hidden">
+
+                <div class="marker marker-percent">rec</div>
+
+                <a href="#" class="product-card-image-block">
+                    <img class="border-image top-border-image" src="images/top-border.png" alt="border"/>
+                    <img class="product-card-image" src="images/image-product-soap-3.jpg" alt="product"/>
+                    <img class="border-image bottom-border-image" src="images/bottom-border.png" alt="border"/>
+                </a>
+
+                <h4><a href="#" class="no-underline">Stenders</a></h4>
+
+                <div class="product-counter in-wide">
+                    <div class="decrement control">-</div>
+                    <div class="current-value"></div>
+                    <div class="increment control">+</div>
+                    <label><input type="number" class="hidden" value="1"/></label>
+                </div>
+
+                <p class="product-description">C нежным ароматом и цветками календулы</p>
+
+                <button class="add-to-cart button-violet left-column">Добавить к заказу</button>
+
+                <div class="product-cost right-column">
+                    <span class="cost-value">3000</span>
+                    <span class="cost-currency">руб</span>
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
-
-    <div class="list-bottom right-column">
-
-        <div class="products-statistic left-column">Показано товаров: <span class="products-visible-number">1 - 6</span> из <span class="products-number">220</span></div>
-
-        <ul class="pages-control right-column">
-            <li class="active"><a class="no-underline" href="#">1</a></li>
-            <li><a class="no-underline" href="#">2</a></li>
-            <li><a class="no-underline" href="#">3</a></li>
-            <li><a class="no-underline" href="#">4</a></li>
-            <li><a class="no-underline" href="#">5</a></li>
-            <li><a class="no-underline" href="#">6</a></li>
-            <li><a class="no-underline" href="#">7</a></li>
-            <li><a class="no-underline" href="#">8</a></li>
-            <li><a class="no-underline" href="#">9</a></li>
-            <li><a class="no-underline" href="#">10</a></li>
-            <li><a class="no-underline" href="#">...</a></li>
-            <li><a class="no-underline" href="#">80</a></li>
-        </ul>
+        <a href="#" class="show-more-items">Показать еще</a>
 
     </div>
+
+
 
 </div>
 
@@ -847,10 +717,8 @@
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/slick.min.js"></script>
 <script src="js/validatr.min.js"></script>
-<script src="js/jQRangeSlider-min.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

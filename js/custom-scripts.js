@@ -8,7 +8,6 @@ $(document).ready(function () {
 
     for (var i = 0; i < slide.length; i++) {
         var imagePath = image[i].getAttribute('src');
-        console.log('url("' + imagePath + '")');
         $(slide[i]).css('background-image', 'url("' + imagePath + '")');
     }
     /* end of pre-load backgrounds for slider */
@@ -69,6 +68,14 @@ $(document).ready(function () {
 
     /** end of scripts for adaptive **/
 
+    /** scripts for scrollbar **/
+
+    $('.custom-scrollbar').mCustomScrollbar();
+
+    $('.hidden-scrollbar').mCustomScrollbar();
+
+    /** end of scripts for scrollbar **/
+
 
     $('.show-search').click(function() {
 
@@ -99,7 +106,6 @@ $(document).ready(function () {
     $('.product-counter .control').click(function() {
 
         var inputValue = parseInt($(this).siblings('label').find('input').val());
-        var costValue  = parseInt($(this).parents('.product').find('.cost-value').html());
 
         if($(this).hasClass('increment')) {
             inputValue++;
@@ -147,31 +153,33 @@ $(document).ready(function () {
         function() {
             if ($(window).width() > '980'){
                 $(this).addClass('desktop-hover');
-                $(this).find('.form-basket-order').stop().slideDown();
+                $(this).find('.form-basket-order').stop().fadeIn();
             }
         },
         function() {
             if ($(window).width() > '980'){
                 $(this).removeClass('desktop-hover');
-                $(this).find('.form-basket-order').stop().slideUp(200);
+                $(this).find('.form-basket-order').stop().fadeOut(200);
             }
         }
     );
 
     $('.basket-visible').click(function() {
         if ($(window).width() < '981'){
-            $('.form-basket-order').stop().slideToggle();
+            $('.form-basket-order').stop().fadeToggle();
             $(this).toggleClass('mobile-hover');
         }
     });
 
+
+
     $(function($) {
-        $('#form-mailing').validatr({
+        $('.checked-form').validatr({
             showall: true
         });
     });
 
-    $('input[type="submit"]').click(function() {
+    $('.form-submit').click(function() {
         $(this).parent().find('.form-field:invalid').addClass('invalid-field');
         $(this).parent().find('.form-field:valid').addClass('valid-field');
     });

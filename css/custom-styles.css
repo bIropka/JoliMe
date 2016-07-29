@@ -192,6 +192,10 @@ img {
     border: 1px solid #765385;
 }
 
+.validatr-message {
+    display: none;
+}
+
 .invalid-field {
     border: 1px solid #ff0000!important;
     background: transparent url('../images/icon-invalid.png') no-repeat 95% center;
@@ -231,6 +235,37 @@ input[type='radio']:checked + .radio-violet-label:before {
 .form-field:focus:-moz-placeholder {color: transparent;}
 .form-field:focus:-ms-input-placeholder {color: transparent;}
 
+/* custom scrollbar */
+.custom-scrollbar .mCSB_inside>.mCSB_container {
+    margin-right: 0;
+}
+.custom-scrollbar .mCSB_draggerRail {
+    width: 7px;
+    background: #f2f2f2;
+}
+.custom-scrollbar .mCSB_dragger {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    width: 7px;
+    background: #cccccc;
+    left: 5px;
+}
+.custom-scrollbar .mCSB_dragger_bar {
+    background: #cccccc!important;
+}
+.hidden-scrollbar .mCSB_inside>.mCSB_container {
+    margin-right: 0;
+}
+.hidden-scrollbar .mCSB_draggerRail {
+    opacity: 0;
+}
+.hidden-scrollbar .mCSB_dragger {
+    opacity: 0;
+}
+.hidden-scrollbar .mCSB_dragger_bar {
+    opacity: 0;
+}
 
 /* header */
 .mobile-menu {
@@ -990,9 +1025,6 @@ nav ul li a:hover, nav ul li a.active {
 .form-mailing .field-email::-moz-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
 .form-mailing .field-email:-moz-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
 .form-mailing .field-email:-ms-input-placeholder {font-family: 'Open Sans Light', sans-serif; font-size: 13px; color: #5c5c5c;}
-.validatr-message {
-    display: none;
-}
 .form-mailing .form-submit {
     display: inline-block;
     width: 133px;
@@ -1411,11 +1443,13 @@ nav ul li a:hover, nav ul li a.active {
 
 .category-article {
     margin-top: 20px;
-    padding: 0 12px;
+    padding: 0 0 0 12px;
     overflow-y: auto;
     height: 250px;
 }
 .category-article p {
+    display: inline-block;
+    width: 95%;
     font-family: 'Open Sans Regular', sans-serif;
     color: #242424;
     font-size: 13px;
@@ -1791,6 +1825,7 @@ nav ul li a:hover, nav ul li a.active {
     font-family: 'Helvetica Neuecyr Medium', sans-serif;
     font-size: 14px;
     color: #a875ad;
+    text-decoration: none;
 }
 .product-item .product-measure {
     display: inline-block;
@@ -1943,9 +1978,12 @@ nav ul li a:hover, nav ul li a.active {
     color: #242424;
     margin-bottom: 25px;
 }
-.item-content .product-card, .form-cart .product-card {
+.item-content .product-card, .form-cart .product-card, .search-content .product-card {
     width: 32%;
     min-width: 290px;
+}
+.you-should-like {
+    margin-top: 50px;
 }
 
 /**********************
@@ -2763,7 +2801,216 @@ nav ul li a:hover, nav ul li a.active {
 
 .blog-content .list-bottom {
     width: 100%;
+}
 
+/**********************
+***** SEARCH PAGE *****
+**********************/
+.search-content h1 {
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 22px;
+    color: #232323;
+    margin-bottom: 15px;
+}
+.search-content .search-request {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #cecece;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 12px;
+    color: #2e2e2e;
+    padding-left: 30px;
+    position: relative;
+}
+.search-content .search-request:before {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url('../images/icon-search.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+/**********************
+***** CONTACTS PAGE *****
+**********************/
+.contacts-content {
+    margin-top: 40px;
+}
+.contacts-content .sidebar {
+    position: static;
+    border: 1px solid #e7e7e7;
+    padding: 25px;
+}
+.contacts-content .sidebar .title {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 16px;
+    color: #242424;
+}
+.sidebar-links {
+    margin-bottom: 20px;
+}
+.sidebar-links ul li {
+    display: block;
+    margin: 10px 0 0 10px;
+}
+.sidebar-links ul li a {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 14px;
+    color: #3f3f3f;
+    text-decoration: none;
+}
+.sidebar-links ul li a:hover, .sidebar-links ul .active a {
+    color: #a875ad;
+}
+
+.contacts-content .main-panel {
+    border-left: none;
+    background: none;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+.contacts-content h1 {
+    font-family: 'Helvetica Neuecyr Roman', sans-serif;
+    font-size: 24px;
+    color: #242424;
+    margin: 15px 0 5px;
+}
+.contacts-content .main-panel .text {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #232323;
+}
+.contacts-content .main-panel .phone-number {
+    display: block;
+    font-family: 'Helvetica Neuecyr Bold', sans-serif;
+    font-size: 40px;
+    color: #a875ad;
+    margin: 20px 0 5px;
+    text-decoration: none;
+}
+.contacts-content .main-panel .email {
+    font-family: 'Helvetica Neuecyr Thin', sans-serif;
+    font-size: 22px;
+    color: #a875ad;
+}
+.contacts-content .main-panel .shop-hours {
+    font-family: 'Helvetica Neuecyr Light', sans-serif;
+    font-size: 16px;
+    color: #7a7a7a;
+    margin: 10px 0 25px;
+}
+.contacts-content .main-panel .on-map {
+    width: 490px;
+    height: 325px;
+}
+
+
+/**********************
+***** SIGN PAGE *****
+**********************/
+.sign-content {
+    margin-top: 10px;
+}
+.form-sign-in {
+    width: 32%;
+}
+.form-sign-up {
+    width: 65%;
+}
+.sign-content form {
+    border:  1px solid #e7e7e7;
+    padding: 20px;
+}
+.sign-content form .text {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 14px;
+}
+.form-sign-in .text {
+    margin-bottom: 15px;
+}
+.sign-content form .prompt {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 13px;
+    margin: 5px 0 15px;
+}
+.sign-content form .text, .sign-content form .prompt {
+    color: #434343;
+}
+.form-sign-in label {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+.form-sign-up label {
+    display: inline-block;
+    width: 220px;
+    margin: 5px 1px;
+}
+.sign-content .form-field {
+    height: 30px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #bdbdbd;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.sign-content .form-field::-webkit-input-placeholder {font-family: 'Helvetica Neuecyr Roman', sans-serif; font-size: 14px; color: #212121;}
+.sign-content .form-field::-moz-placeholder {font-family: 'Helvetica Neuecyr Roman', sans-serif; font-size: 14px; color: #212121;}
+.sign-content .form-field:-moz-placeholder {font-family: 'Helvetica Neuecyr Roman', sans-serif; font-size: 14px; color: #212121;}
+.sign-content .form-field:-ms-input-placeholder {font-family: 'Helvetica Neuecyr Roman', sans-serif; font-size: 14px; color: #212121;}
+.sign-content .form-field:focus::-webkit-input-placeholder {color: transparent;}
+.sign-content .form-field:focus::-moz-placeholder {color: transparent;}
+.sign-content .form-field:focus:-moz-placeholder {color: transparent;}
+.sign-content .form-field:focus:-ms-input-placeholder {color: transparent;}
+
+.sign-content .form-submit {
+    height: 28px;
+    line-height: 26px;
+    padding-right: 10px;
+    position: relative;
+}
+.sign-content .form-submit:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: transparent url('../images/sprite-side-arrow.png') no-repeat 27% center;
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.sign-content .form-submit:hover:after {
+    background: transparent url('../images/sprite-side-arrow.png') no-repeat 55% center;
+    background-size: cover;
+}
+.sign-content .form-submit:active:after, .sign-content .form-submit:focus:after {
+    background: transparent url('../images/sprite-side-arrow.png') no-repeat -1% center;
+    background-size: cover;
+    opacity: 0.6;
+}
+.form-sign-in .form-submit {
+    width: 195px;
+    margin-top: 14px;
+    margin-right: 15px;
+}
+.form-sign-up .form-submit {
+    width: 220px;
+}
+.form-sign-up .form-submit:after {
+    right: 30px;
+}
+.form-sign-in .forget-password {
+    display: inline-block;
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 12px;
+    color: #a875ad;
 }
 
 /* footer */
@@ -2946,6 +3193,13 @@ nav ul li a:hover, nav ul li a.active {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+    }
+    .form-sign-in .form-submit {
+        margin-right: 0;
+        margin-bottom: 22px;
+    }
+    .form-sign-up label {
+        margin-right: 20px;
     }
 }
 
@@ -3200,6 +3454,9 @@ nav ul li a:hover, nav ul li a.active {
         max-height: 240px;
         overflow-y: auto;
     }
+    .header-top ul li {
+        width: 94%;;
+    }
     .icon-basket {
          background: transparent url('../images/sprite-icon-basket.png') no-repeat right center;
          background-size: cover;
@@ -3349,6 +3606,38 @@ nav ul li a:hover, nav ul li a.active {
     .articles-list li h2 {
         font-size: 24px;
     }
+    .contacts-content {
+        margin: 0 0 30px;
+    }
+    .contacts-content .sidebar {
+        border: none;
+        padding: 10px;
+    }
+    .sidebar-links {
+        display: inline-block;
+        text-align: left;
+        margin: 10px 20px;
+    }
+    .sidebar-links ul li {
+        margin-left: 0;
+    }
+    .contacts-content .main-panel {
+        padding: 0;
+    }
+    .contacts-content .main-panel .on-map {
+        width: 100%;
+    }
+    .form-sign-in, .form-sign-up {
+        float: none;
+        margin-top: 20px;
+    }
+    .form-sign-in {
+        width: 300px;
+    }
+    .form-sign-up {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -3587,6 +3876,12 @@ nav ul li a:hover, nav ul li a.active {
         font-size: 18px;
         max-height: 115px;
     }
+    .contacts-content .sidebar {
+        text-align: left;
+    }
+    .form-sign-up .form-submit {
+        margin-top: 20px;
+    }
 }
 @media (max-width: 480px) {
     .block-content {
@@ -3686,6 +3981,9 @@ nav ul li a:hover, nav ul li a.active {
     }
     .list-bottom .pages-control li {
         padding: 0 4px 0 4px;
+    }
+    .contacts-content .main-panel .phone-number {
+        font-size: 32px;
     }
 
 }
