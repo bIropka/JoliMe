@@ -77,6 +77,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     color: #5c5c5c;
+    font-family: 'Open Sans Regular', sans-serif;
 }
 ul li {
     display: inline-block;
@@ -1082,6 +1083,11 @@ nav ul li a:hover, nav ul li a.active {
 }
 .promo-text {
     padding-right: 30px;
+}
+.promo-text h1 {
+    font-family: 'Helvetica Neuecyr Thin', sans-serif;
+    font-size: 24px;
+    color: #000000;
 }
 .promo-text h3 {
     font-family: 'Helvetica Neuecyr Thin', sans-serif;
@@ -2944,6 +2950,11 @@ nav ul li a:hover, nav ul li a.active {
     border:  1px solid #e7e7e7;
     padding: 20px;
 }
+.sign-content form h2 {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 24px;
+    color: #000000;
+}
 .sign-content form .text {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 14px;
@@ -3290,24 +3301,38 @@ nav ul li a:hover, nav ul li a.active {
         margin-top: 47px;
         padding: 20px 30px 40px;
     }
-    .mobile-menu {
-        display: block;
+    .mobile-menu-wrap {
         width: 269px;
-        background: #323232;
+        height: 100%;
         position: fixed;
         left: -269px;
-        height: 100%;
         top: 0;
-        z-index: 11;
-        padding-bottom: 50px;
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        overflow-y: auto;
+        z-index: 12;
+        /*overflow-y: auto;*/
     }
-    .mobile-menu.active {
+    .mobile-menu {
+        display: block;
+        width: 269px;
+        background: #323232;
+        /*position: fixed;
+        left: -269px;*/
+        /*height: 100%;*/
+        /*top: 0;*/
+        /*z-index: 11;*/
+        padding-bottom: 50px;
+        /*overflow-y: auto;*/
+        /*-webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;*/
+    }
+    .mobile-menu-wrap.active {
         left: 0;
     }
     .burger {
@@ -3319,7 +3344,7 @@ nav ul li a:hover, nav ul li a.active {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 12;
+        z-index: 11;
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
