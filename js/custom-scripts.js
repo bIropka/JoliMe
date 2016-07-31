@@ -24,7 +24,9 @@ $(document).ready(function () {
     /** scripts for adaptive **/
 
     if ($(window).width() < '981'){
-        searchObj.prependTo('.header .mobile-menu');
+        if ($('.mobile-menu').children('.form-search').length == 0) {
+            searchObj.prependTo('.header .mobile-menu');
+        }
         topMenuObj.insertAfter('.top-menu-title');
         mainMenuObj.insertAfter('.main-menu-title');
         topMenuObj.css('display', 'none');
@@ -44,7 +46,9 @@ $(document).ready(function () {
 
     $(window).resize(function(){
         if ($(window).width() < '981'){
-            searchObj.prependTo('.header .mobile-menu');
+            if ($('.mobile-menu').children('.form-search').length == 0) {
+                searchObj.prependTo('.header .mobile-menu');
+            }
             topMenuObj.insertAfter('.top-menu-title');
             mainMenuObj.insertAfter('.main-menu-title');
             topMenuObj.css('display', 'none');
