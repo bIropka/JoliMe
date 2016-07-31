@@ -3319,18 +3319,7 @@ nav ul li a:hover, nav ul li a.active {
         display: block;
         width: 269px;
         background: #323232;
-        /*position: fixed;
-        left: -269px;*/
-        /*height: 100%;*/
-        /*top: 0;*/
-        /*z-index: 11;*/
         padding-bottom: 50px;
-        /*overflow-y: auto;*/
-        /*-webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;*/
     }
     .mobile-menu-wrap.active {
         left: 0;
