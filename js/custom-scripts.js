@@ -12,7 +12,15 @@ $(document).ready(function () {
     }
     /* end of pre-load backgrounds for slider */
 
-    $('.product-counter .current-value').html($('.product-counter input').val());
+    initCounters();
+
+    function initCounters() {
+        var counters = document.getElementsByClassName('product-counter');
+        for (var i = 0; i < counters.length; i++) {
+            var amount = parseInt($(counters[i]).find('input').val());
+            $(counters[i]).find('.current-value').html(amount);
+        }
+    }
 
     var searchObj = $('#form-search');
     var topMenuObj = $('.header-top .top-menu');
