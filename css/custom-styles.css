@@ -153,6 +153,11 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     text-align-last: justify;
     text-align: justify;
 }
+.in-wide:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
 img {
     display: block;
     width: 100%;
@@ -3125,15 +3130,10 @@ nav ul li a:hover, nav ul li a.active {
     background: #4a4949;
 }
 .footer-middle .block-content {
-    padding: 35px 30px 0;
-}
-.footer-middle .block-content:after {
-    content: '';
-    display: block;
-    width: 100%;
+    padding: 35px 30px 30px;
     border-bottom: 1px solid #655e54;
-    margin: 30px auto 0;
 }
+
 .footer-links {
     vertical-align: top;
     -moz-text-align-last: left;
