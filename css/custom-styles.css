@@ -2754,17 +2754,17 @@ nav ul li a:hover, nav ul li a.active {
     border: none;
     outline: none;
 }
-.blog-content .quote {
+.blog-content blockquote {
     width: 100%;
     background: #fef0ff;
     padding: 20px 2.5% 30px 120px;
     margin-top: 30px;
     position: relative;
 }
-.blog-content .quote p {
+.blog-content blockquote p {
     margin: 10px 0;
 }
-.blog-content .quote:before {
+.blog-content blockquote:before {
     content: '';
     display: block;
     width: 86px;
