@@ -797,6 +797,7 @@ nav ul li a:hover, nav ul li a.active {
     display: inline-block;
     padding-top: 5px;
     border-top: 1px solid #a875ad;
+    margin-bottom: 65px;
 }
 .slide-1 p span {
     font-family: 'Helvetica Neuecyr Roman', sans-serif;
@@ -813,7 +814,6 @@ nav ul li a:hover, nav ul li a.active {
     border-radius: 25px;
     font-family: 'Helvetica Neuecyr Light', sans-serif;
     font-size: 15px;
-    margin-top: 65px;
 }
 
 .slider-dots {
@@ -1113,7 +1113,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 .promo-text {
     padding-right: 30px;
-    height: 250px;
+    height: 230px;
 }
 .promo-text h1 {
     font-family: 'Helvetica Neuecyr Thin', sans-serif;
@@ -3836,6 +3836,9 @@ nav ul li a:hover, nav ul li a.active {
     .slide-1 p, .slide-1 p span {
         font-size: 18px;
     }
+    .slide-1 p {
+        margin-bottom: 40px;
+    }
     .slide {
         min-height: 350px;
         padding: 40px 0;
@@ -3881,9 +3884,7 @@ nav ul li a:hover, nav ul li a.active {
     .tab-controls .active {
         text-decoration: none;
     }
-    .slide-1 .button-violet {
-        margin-top: 40px;
-    }
+
     .form-mailing .title {
         line-height: 1.4;
         margin-bottom: 20px;
@@ -4107,12 +4108,12 @@ nav ul li a:hover, nav ul li a.active {
     .slide-1 p, .slide-1 p span {
         font-size: 18px;
     }
+    .slide-1 p {
+        margin-bottom: 20px;
+    }
     .slide {
         min-height: 350px;
         padding: 40px 0 60px;
-    }
-    .slide-1 a {
-        margin-top: 20px;
     }
     .product-card {
         width: 295px;
