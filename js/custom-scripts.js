@@ -207,8 +207,8 @@ $(document).ready(function () {
             var currentIndex = $(this).index();
             $('.product-more-info .control-panel .active').removeClass('active');
             $(this).addClass('active');
-            $('.product-more-info .more-content .active').removeClass('active');
-            $('.product-more-info .more-content li').eq(currentIndex).addClass('active');
+            $('.product-more-info .more-content-item.active').removeClass('active');
+            $('.product-more-info .more-content-item').eq(currentIndex).addClass('active');
         }
 
     });

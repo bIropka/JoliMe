@@ -2005,13 +2005,13 @@ nav ul li a:hover, nav ul li a.active {
 .product-advantages {
     margin: 20px 0 30px;
     border: 1px solid #e7e7e7;
-    text-align: center;
-    padding: 12px 15px;
+    padding: 5px 15px;
 }
 .product-advantages li {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 15px;
     color: #2e2e2e;
+    margin-bottom: -20px;
 }
 .product-advantages li:before {
     content: '';
@@ -2050,7 +2050,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #242424;
     border-bottom: 2px solid #a875ad;
 }
-.product-more-info .more-content li {
+.product-more-info .more-content-item {
     display: none;
     font-family: 'Helvetica Neuecyr Light', sans-serif;
     font-size: 16px;
@@ -2061,7 +2061,7 @@ nav ul li a:hover, nav ul li a.active {
     margin-top: -1px;
     margin-bottom: 40px;
 }
-.product-more-info .more-content .active {
+.product-more-info .more-content-item.active {
     display: block;
 }
 
@@ -3704,6 +3704,9 @@ nav ul li a:hover, nav ul li a.active {
         text-align-last: center;
         text-align: center;
     }
+    .product-advantages:after {
+        display: none;
+    }
     .product-advantages li {
         margin: 8px 20px 8px 0;
     }
@@ -4154,6 +4157,15 @@ nav ul li a:hover, nav ul li a.active {
     }
     .form-cart h2 {
         margin: 30px 10px 20px;
+    }
+    .product-advantages {
+        -moz-text-align-last: left;
+        -ms-text-align-last: left;
+        text-align-last: left;
+        text-align: left;
+    }
+    .product-advantages li {
+        display: block;
     }
 }
 
