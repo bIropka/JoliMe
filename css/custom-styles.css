@@ -466,10 +466,10 @@ input[type='radio']:checked + .radio-violet-label:before {
 .header-nav {
     background: #525252;
 }
-nav ul li {
+nav > ul > li {
     margin-bottom: -22px;
 }
-nav ul li a {
+nav > ul > li > a {
     display: inline-block;
     height: 60px;
     line-height: 60px;
@@ -477,12 +477,59 @@ nav ul li a {
     font-size: 17px;
     color: #ffffff;
     text-decoration: none;
+    position: relative;
 }
-nav ul li a:hover, nav ul li a.active {
+.header-nav .sub-menu-wrap {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    background: #525252;
+    -moz-text-align-last: center;
+    -ms-text-align-last: center;
+    text-align-last: center;
+    text-align: center;
+    font-size: 0;
+}
+.header-nav .sub-menu {
+    display: none;
+    padding: 10px 0;
+}
+.header-nav .sub-menu li {
+    margin: 10px;
+    vertical-align: top;
+}
+.header-nav .sub-menu li a {
+    display: block;
+    width: 100px;
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 1.2;
+}
+.header-nav .sub-menu li a .image-wrap {
+    display: block;
+    width: 70px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+.header-nav .sub-menu li a .image-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+nav > ul > li > a:hover, nav > ul > li > a.active, .header-nav .sub-menu a:hover, .header-nav .sub-menu a.active {
     color: #efd5f3;
 }
 
-/* header-info */
+
+    /* header-info */
 .header-info {
     position: relative;
     padding: 85px 30px 90px;
