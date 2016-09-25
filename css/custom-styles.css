@@ -2654,7 +2654,7 @@ nav ul li a:hover, nav ul li a.active {
     background: #ffffff;
     margin-bottom: 40px;
 }
-.blog-content h1 {
+.blog-content article h1 {
     display: inline-block;
     vertical-align: middle;
     font-family: 'Open Sans Semibold', sans-serif;
@@ -2662,6 +2662,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #ffffff;
     background: #a875ad;
     padding: 8px 15px;
+    max-width: 70%
 }
 .blog-content .article-date {
     display: inline-block;
@@ -2697,22 +2698,23 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1;
     color: #a3a3a3;
     padding-right: 10px;
+    padding-left: 0;
     background: #ffffff;
 }
-.blog-content h2 {
+.blog-content article h2 {
     font-family: 'Open Sans Regular', sans-serif;
     font-size: 18px;
     color: #353535;
     padding: 0 2.5%;
     margin-bottom: 15px;
 }
-.blog-content p {
+.blog-content article p {
     font-family: 'Open Sans Regular', sans-serif;
     font-size: 16px;
     color: #353535;
     padding: 0 2.5%;
 }
-.blog-title-image {
+.blog-content article .blog-title-image {
     width: 95%;
     margin: 20px auto 30px;
     border: 1px solid #a875ad;
@@ -2863,8 +2865,8 @@ nav ul li a:hover, nav ul li a.active {
     overflow-y: hidden;
 }
 .articles-list li .marker {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background: #ffffff url('../images/sprite-arrows-large.png') no-repeat left center;
     background-size: cover;
     position: absolute;
@@ -2886,7 +2888,8 @@ nav ul li a:hover, nav ul li a.active {
     width: 60%;
 }
 .articles-list img {
-    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
     width: auto;
     position: absolute;
     margin: auto;
@@ -2894,9 +2897,10 @@ nav ul li a:hover, nav ul li a.active {
     right: 0;
     top: 0;
     bottom: 0;
+    opacity: 0.7;
 }
 .articles-list .no-image{
-    background: #2b202c;
+    background: rgba(43, 32, 44, 0.7);
 }
 
 .blog-content .list-bottom {
@@ -3936,7 +3940,7 @@ nav ul li a:hover, nav ul li a.active {
     .blog-content .article-date {
         display: block;
         margin-top: 15px;
-        margin-left: 5%;
+        margin-left: 2.5%;
     }
     .article-analogs .article-date {
         margin: 0;
