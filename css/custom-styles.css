@@ -125,6 +125,15 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     outline: none;
     border: none;
 }
+input[type='text'], input[type='tel'], input[type='email'] {
+    width: 100%;
+    height: 30px;
+    padding: 0 20px;
+    border: 1px solid #bdbdbd;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
 .left-column {
     float: left;
 }
@@ -295,12 +304,14 @@ input[type='radio']:checked + .radio-violet-label:before {
     position: relative;
     margin-right: 10px;
 }
+
 .form-search input[type="text"] {
     display: inline-block;
     vertical-align: middle;
     font-family: 'Open Sans Light', sans-serif;
     font-size: 12px;
     width: 0;
+    border: none;
     border-bottom: 1px solid #cdcdcd;
     position: absolute;
     bottom: -2px;
@@ -310,6 +321,11 @@ input[type='radio']:checked + .radio-violet-label:before {
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    height: auto;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
 .form-search input[type="text"].active {
     width: 300px;
@@ -351,7 +367,7 @@ input[type='radio']:checked + .radio-violet-label:before {
     background: transparent url('../images/sprite-arrow.png') no-repeat left center;
     background-size: cover;
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 3px;
 }
 .current-local.active:after {
@@ -440,13 +456,18 @@ input[type='radio']:checked + .radio-violet-label:before {
 .sign-mobile {
     display: none;
 }
+.current-local .flag, .current-local .text {
+    vertical-align: middle;
+    line-height: 12px;
+    margin-bottom: 4px;
+}
 
 /* header-nav */
 .header-nav {
     background: #525252;
-    height: 60px;
 }
 nav ul li {
+    margin-bottom: -22px;
 }
 nav ul li a {
     display: inline-block;
@@ -455,6 +476,7 @@ nav ul li a {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 17px;
     color: #ffffff;
+    text-decoration: none;
 }
 nav ul li a:hover, nav ul li a.active {
     color: #efd5f3;
@@ -574,7 +596,7 @@ nav ul li a:hover, nav ul li a.active {
 .form-basket-order {
     display: none;
     width: 280px;
-    padding: 15px;
+    padding: 15px 0 15px 15px;
     position: absolute;
     top: 52px;
     right: 0;
@@ -583,6 +605,9 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 1px 1px 2px 0 rgba(168, 117, 173, 0.1), -1px -1px 2px 0 rgba(168, 117, 173, 0.1);
     background: #ffffff;
     z-index: 1;
+}
+.form-basket-order .custom-scrollbar {
+    height: 400px;
 }
 .form-basket-order .title {
     font-family: 'Open Sans Regular', sans-serif;
@@ -622,6 +647,7 @@ nav ul li a:hover, nav ul li a.active {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-bottom: -22px;
 }
 .product-counter .decrement {
     line-height: 22px;
@@ -635,8 +661,8 @@ nav ul li a:hover, nav ul li a.active {
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding: 0 10px;
+    margin-bottom: -22px;
 }
-
 .basket-product .close-marker {
     display: block;
     text-align: center;
@@ -654,10 +680,11 @@ nav ul li a:hover, nav ul li a.active {
     cursor: pointer;
     position: absolute;
     top: 12px;
-    right: 0;
+    right: 20px;
 }
 .basket-product .right-column {
-    width: 175px;
+    width: 165px;
+    margin-right: 20px;
 }
 .basket-product h5 {
     font-family: 'Helvetica Neuecyr Medium', sans-serif;
@@ -681,8 +708,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 .basket-product .product-cost {
     position: absolute;
-    right: 0;
-    bottom: 8px;
+    right: 20px;
+    bottom: 13px;
 }
 .basket-product .cost-text {
     font-family: 'Open Sans Regular', sans-serif;
@@ -711,12 +738,12 @@ nav ul li a:hover, nav ul li a.active {
 /* header-bottom */
 .header-bottom {
     border-top: 1px solid #e7e7e7;
-    padding: 10px 0;
 }
 .header-bottom ul li {
     font-family: 'Open Sans Semibold', sans-serif;
     font-size: 13px;
     color: #5c5c5c;
+    margin-bottom: -16px;
 }
 .header-bottom ul li:before {
     content: '';
@@ -790,7 +817,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .slider-dots {
-    padding: 13px 30px;
+    padding: 0 30px;
 }
 .slider-dots li {
     font-family: 'Helvetica Neuecyr Light', sans-serif;
@@ -799,6 +826,7 @@ nav ul li a:hover, nav ul li a.active {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: -16px;
 
 }
 .slider-dots li.active {
@@ -873,8 +901,7 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 20px;
 }
 .border-image {
-    display: block;
-    opacity: 0;
+    display: none;
     position: absolute;
     width: 30%;
     height: auto;
@@ -907,8 +934,7 @@ nav ul li a:hover, nav ul li a.active {
     position: absolute;
     left: 10px;
     top: 15px;
-    z-index: 1;
-    opacity: 1;
+    z-index: 5;
 }
 .marker-percent {background: #f25959;}
 .marker-hot {background: #ffa200;}
@@ -993,11 +1019,8 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 18px;
     color: #000000;
 }
-.product-card:hover .marker {
-    opacity: 0;
-}
 .product-card:hover .border-image {
-    opacity: 1;
+    display: block;
 }
 
 /* form-mailing */
@@ -3094,11 +3117,12 @@ nav ul li a:hover, nav ul li a.active {
 }
 .footer-top {
     background: #f8f8f8;
+    padding: 19px 0;
 }
 .footer-top ul li {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 18px;
-    margin: 2.5% 0;
+    margin-bottom: -20px;
 }
 .footer-top ul li:before {
     content: '';
@@ -3231,6 +3255,12 @@ nav ul li a:hover, nav ul li a.active {
     background: transparent url('../images/icon-markello-logo.png') no-repeat center;
     margin-left: 5px;
 }
+.markello-block, .footer-bottom a {
+    margin-bottom: 3px;
+}
+.footer-bottom .copyrights, .footer-bottom .markello-block {
+    margin-bottom: -20px;
+}
 
 /* media queries */
 @media (max-width: 1170px) {
@@ -3279,6 +3309,12 @@ nav ul li a:hover, nav ul li a.active {
         -ms-text-align-last: center;
         text-align-last: center;
         text-align: center;
+    }
+    .footer-top ul li {
+        margin: 5px 0;
+    }
+    .footer-top ul:after {
+        display: none;
     }
     .footer-middle .footer-links {
         margin: 20px;
@@ -3760,6 +3796,9 @@ nav ul li a:hover, nav ul li a.active {
         -ms-text-align-last: center;
         text-align-last: center;
         text-align: center;
+    }
+    .header-bottom ul:after {
+        display: none;
     }
     .header-bottom ul li {
         margin: 10px;
