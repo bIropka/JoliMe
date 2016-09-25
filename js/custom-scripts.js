@@ -360,6 +360,20 @@ $(document).ready(function () {
 
     });
 
+    $('.filter .title').click(function() {
+        $(this).toggleClass('closed');
+        $(this).next('ul').slideToggle();
+        $(this).siblings('.show-more').slideToggle();
+    });
+
+    $('.filter .show-more').click(function() {
+        var fields = $(this).siblings('ul').find('li');
+        for (var i = 8; i < fields.length; i++) {
+            $(fields[i]).fadeToggle(200);
+        }
+        $(this).toggleClass('closed');
+    });
+
     /** script for filter-slider **/
 
     var minPrice = parseInt($('.filter-slider-min').html()), maxPrice = parseInt($('.filter-slider-max').html());

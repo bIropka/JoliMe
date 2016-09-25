@@ -1227,7 +1227,7 @@ nav ul li a:hover, nav ul li a.active {
 
 /* sidebar */
 .sidebar {
-    width: 25%;
+    width: 23%;
     position: absolute;
     left: 0;
     -webkit-transition: 1s;
@@ -1304,11 +1304,17 @@ nav ul li a:hover, nav ul li a.active {
     display: block;
     width: 10px;
     height: 5px;
-    background: transparent url('../images/sprite-arrow.png') no-repeat left center;
+    background: transparent url('../images/sprite-arrow.png') no-repeat right center;
     background-size: cover;
     position: absolute;
     bottom: 5px;
     right: 0;
+}
+.filter .title.closed:after {
+    background-position: left center;
+}
+.filter .title:hover {
+    text-decoration: underline;
 }
 
 .filter ul li {
@@ -1349,29 +1355,37 @@ nav ul li a:hover, nav ul li a.active {
     background-size: cover;
 }
 .filter .show-more {
-    display: inline-block;
-    padding-right: 20px;
+    display: block;
+    padding-right: 10px;
     font-family: 'Open Sans Regular', sans-serif;
     font-size: 12px;
     color: #a875ad;
     position: relative;
+    width: 105px;
+    cursor: pointer;
 }
 .filter .show-more:after {
     content: '';
     display: block;
     width: 10px;
     height: 5px;
-    background: transparent url('../images/sprite-arrow.png') no-repeat 57% center;
+    background: transparent url('../images/sprite-arrow.png') no-repeat 72% center;
     background-size: cover;
     position: absolute;
     right: 0;
     bottom: 5px;
 }
+.filter .show-more.closed:after {
+    background-position: 57% center;
+}
+.filter .show-more:hover {
+    text-decoration: underline;
+}
 
 .filter-slider {
     margin: 30px auto 60px;
     position: relative;
-    width: 95%;
+    width: 92%;
 }
 .filter-slider-wrap .title:after {
     display: none;
@@ -1448,7 +1462,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 .filter-slider .ui-rangeSlider-rightLabel .ui-rangeSlider-label-value {
     right: auto;
-    left: 3px;
+    left: 0;
     text-align: left;
 }
 .filter-slider .ui-rangeSlider-label-inner {
@@ -1497,7 +1511,7 @@ nav ul li a:hover, nav ul li a.active {
 
 /* main-panel */
 .main-panel {
-    width: 75%;
+    width: 77%;
     padding: 0 20px 10px;
     background: #fbfbfb;
     position: relative;
