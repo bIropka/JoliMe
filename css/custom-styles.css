@@ -1113,11 +1113,13 @@ nav ul li a:hover, nav ul li a.active {
 }
 .promo-text {
     padding-right: 30px;
+    height: 250px;
 }
 .promo-text h1 {
     font-family: 'Helvetica Neuecyr Thin', sans-serif;
     font-size: 24px;
     color: #000000;
+    padding-right: 25px;
 }
 .promo-text h3 {
     font-family: 'Helvetica Neuecyr Thin', sans-serif;
@@ -1125,6 +1127,7 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: 100;
     color: #000000;
     line-height: 30px;
+    padding-right: 25px;
 }
 .promo-text p {
     font-family: 'Open Sans Light', sans-serif;
@@ -1132,9 +1135,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #000000;
     margin-top: 15px;
     line-height: 1.2;
-}
-.articles-short ul {
-    margin-top: 25px;
+    padding-right: 25px;
 }
 .articles-short .right-column .title {
     display: inline-block;
@@ -1161,7 +1162,7 @@ nav ul li a:hover, nav ul li a.active {
     text-align-last: left;
     text-align: left;
     font-family: 'Open Sans Regular', sans-serif;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 .article-short .left-column {
     width: 70px;
