@@ -2076,7 +2076,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 /**********************
-**** CART PAGE ****
+******* CART PAGE *****
 **********************/
 
 .form-cart {
@@ -2391,6 +2391,11 @@ nav ul li a:hover, nav ul li a.active {
 .special-gifts .radio-violet-label:before {
     width: 20px;
     height: 20px;
+}
+
+.form-cart .you-should-like h4 {
+    color: inherit;
+    font-family: inherit;
 }
 
 .cart-promo-code {
