@@ -26,6 +26,7 @@ $(document).ready(function () {
     var topMenuObj = $('.header-top .top-menu');
     var mainMenuObj = $('nav > ul');
     var basketObj = $('.basket-block');
+    var subMenuObj = $('.sub-menu-wrap .sub-menu-inner');
 
     /**end of initial block **/
 
@@ -36,6 +37,8 @@ $(document).ready(function () {
             searchObj.prependTo('.header .mobile-menu');
         }
         topMenuObj.insertAfter('.top-menu-title');
+        subMenuObj.appendTo('.mobile-menu');
+        subMenuObj.addClass('hidden-scrollbar closed');
         mainMenuObj.insertAfter('.main-menu-title');
         topMenuObj.css('display', 'none');
         $('.top-menu-title').removeClass('active');
@@ -44,6 +47,8 @@ $(document).ready(function () {
     } else {
         searchObj.insertBefore('#form-locals');
         topMenuObj.prependTo('.header-top');
+        subMenuObj.prependTo('.sub-menu-wrap .block-content');
+        subMenuObj.removeClass('hidden-scrollbar closed');
         mainMenuObj.prependTo('.header-nav > .block-content');
         topMenuObj.css('display', 'block');
         mainMenuObj.css('display', 'block');
@@ -60,6 +65,8 @@ $(document).ready(function () {
             topMenuObj.insertAfter('.top-menu-title');
             mainMenuObj.insertAfter('.main-menu-title');
             topMenuObj.css('display', 'none');
+            subMenuObj.appendTo('.mobile-menu');
+            subMenuObj.addClass('hidden-scrollbar closed');
             $('.top-menu-title').removeClass('active');
             basketObj.insertAfter('.sign-mobile');
             $('.form-basket-order').slideUp();
@@ -69,6 +76,8 @@ $(document).ready(function () {
             searchObj.insertBefore('#form-locals');
             topMenuObj.prependTo('.header-top');
             mainMenuObj.prependTo('.header-nav > .block-content');
+            subMenuObj.prependTo('.sub-menu-wrap .block-content');
+            subMenuObj.removeClass('hidden-scrollbar closed');
             topMenuObj.css('display', 'block');
             mainMenuObj.css('display', 'block');
             basketObj.insertAfter('.sign-block');
@@ -104,15 +113,17 @@ $(document).ready(function () {
     $('.special-gifts ul li').click(function() {
             $(this).find('input').prop('checked', true);
     });
-    
+
+    var currentLiIndex;
     $('nav > ul > li').hover(
         function() {
-            var currentLiIndex;
-            if ($(this).index() != currentLiIndex) {
-                currentLiIndex = $(this).index();
-                $('.sub-menu-wrap .sub-menu').fadeOut(0);
+            if ($(window).width() > '980'){
+                if ($(this).index() != currentLiIndex) {
+                    currentLiIndex = $(this).index();
+                    $('.sub-menu-wrap .sub-menu').css('display', 'none');
+                }
+                $('.sub-menu-wrap .sub-menu-inner .sub-menu').eq(currentLiIndex).css('display', 'block');
             }
-            $('.sub-menu-wrap .block-content ul li').eq(currentLiIndex).find('ul').fadeIn(800);
         },
         function() {
 
@@ -123,9 +134,24 @@ $(document).ready(function () {
 
         },
         function() {
-            $('.sub-menu-wrap .sub-menu').fadeOut(0);
+            if ($(window).width() > '980'){
+                $('.sub-menu-wrap .sub-menu').fadeOut(0);
+            }
         }
     );
+
+    $('.mobile-menu .main-menu li span').click(function() {
+        if ($(window).width() < '981'){
+            $('.sub-menu-inner .sub-menu').css('display', 'none');
+            var index = $(this).parent().index();
+            $('.sub-menu-inner .sub-menu').eq(index).css('display', 'block');
+            $('.sub-menu-inner').removeClass('closed');
+        }
+    });
+
+    $('.sub-menu-close').click(function() {
+        $('.sub-menu-inner').addClass('closed');
+    });
 
     /** scripts for scrollbar **/
 
@@ -139,7 +165,7 @@ $(document).ready(function () {
     $('.show-search').click(function() {
 
         $('#search-field').toggleClass('active');
-        $('#search-field').focus();
+        $('#search-field').trigger('focus');
 
     });
 
